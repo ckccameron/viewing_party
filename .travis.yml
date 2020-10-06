@@ -3,11 +3,18 @@ rbenv:
 - 2.5.3
 addons:
   postgresql: 9.6
+cache:
+- bundler
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec
 deploy:
   provider: heroku
   api_key:
-  app:
-  run: rails db:migrate
+    secure: Hq5yqXXE2mU3fQd2/cnX65Iwefw5/3K0d15bdrauFkap65XCsfuCRCj/Y7mPXl109SANGrQ1P+v+Nll2OpbMGbh7DphpFUYzYBKatdPchMMYq3T/WYgDC/YMJLwC2l3jX0bYobbq4M/CfMVbqywqx9kani6K87UwJS6mP84X5cIlTBT2i1/qvC9jSo+hQSchSxxnd+ZLSR2tOZ0KOSPH+1pRbEr4PMLRDmYA2NHZk2JanYSwEpvr03MaWTeICqCxceM2iibP35IlcZAmS2BsSLTUI1HvvDlpQsFWHD9q7F6EtvDU5r5XMtNyGOFpZd4aX5WYc68okAso19bdVeL9bNORHbbq8OJJdMrfV29/kUr0H8ChTiJ6VsDkqzY5L2xtkfW/mbs0TYzTfoqE9G1jHjlQhDURJienbs6rKe3tQf1ZB9vO8WZIAwiuBt2sVZJv669qMhX125IG6abIIK+W0FwJZZ9OlTfNpx8OWRzcs0uHsw2p254LSIxiC1as2mkAlEhkF9W75qh4kQWMr2IAmJAN2gWFpaNkV1zt5bhqFCykdFychXBSbo/1IAEylAyYMT+M7HPNkHRdLGLczG/zaGe9Q2etyFt/Jviv9zQQRgEuGYc2R6ATKN52JSMqA3jpL7b0wjCZLPtMvGdj/id4lKxLz+oOcJlRyGmLXcSbKkc=
+  app: viewing-party-ac
+  on:
+    repo: ckccameron/viewing_party
+    branch: main
+  skip_cleanup: 'true'
+  email_notifications: false
