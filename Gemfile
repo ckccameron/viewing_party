@@ -17,6 +17,7 @@ gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'faraday'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'pry'
@@ -35,6 +36,7 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
+  gem 'shoulda-matchers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
