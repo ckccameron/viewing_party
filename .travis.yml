@@ -1,6 +1,10 @@
 language: ruby
 rbenv:
 - 2.5.3
+notifications:
+  email:
+    on_success: never
+    on_failure: never
 addons:
   postgresql: 9.6
 cache:
@@ -17,4 +21,3 @@ deploy:
     repo: ckccameron/viewing_party
     branch: main
   skip_cleanup: 'true'
-  email_notifications: false
