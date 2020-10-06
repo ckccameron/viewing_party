@@ -8,6 +8,9 @@ script:
 - bundle exec rspec
 deploy:
   provider: heroku
-  api_key:
-  app:
+  api_key: 
+  app: 
   run: rails db:migrate
+env:
+  global:
+    secure: YM4jzIZ8s9296dXJGUxaD/WwdqPOiaVZaNWrH7uNKAhSNgCs3vLuevp6m+iSpVqCH4OyF1PgjizH12Hrm5/OLphDc1sat97gxq7ghcGSNs1cuokD0JX2/C8Jq9i+BhYs+5oHMSfRaRKCcUo/f89cDh3VirhRh2p0ag4qdU6m5TUKcEanPRlc37zViXTfSZptYL0ci+r6Zn6LGckFqHQ5hjnX/Cj4gts/ZCjpofKAZmLCO1KdceUWyFA8tGCgNOKsbmQtt/nr3DSfH2Zkpm2hqrbddPng+4XyjCj7Y08WplxGj3SjLOiYd0LhQawVAhtLDWed1MOCJZSAKG/jihCOD1+CNv2+0OCx3JGEh0VuJiWGFk19jsMcTJo7e9zapB9pw3Q47PCtJLW3pHxAoHs4IEysOwKy/4t7K+dOv+I7bDd3w/+lgbbvKUHNQZG4Q+qXnpAvqIG/VRu7Hrpf7Iy7SuLFd/M+E/lcxq++cxKYwWgvd35HjzYPJRLoXtUgWugZrnDpk998DPWzmtNX7AsJDXKAHDnioLe+LA5F87RySUA086ppVS648K1nuetQhWvJhOwarbhRf1+WyNfHYxreYztnqo9x7Ya/f+kQ0ReNiZprN9El0Y1pBTXHoT8UnTtNNw+M13q28hd2OMp1Mk/EBfnU1Cw8aAtmPn7odrXHStY=
