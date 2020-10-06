@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "user registration" do
-  it "allows a new user to register" do
+  it "allows a new user to register and logs them in" do
     visit root_path
 
     click_link "Register"
