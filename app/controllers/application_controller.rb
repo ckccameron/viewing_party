@@ -6,4 +6,15 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
+  def logged_in?
+    session[:user_id]
+  end
+
+  private
+  def require_login
+    unless logged_in?
+      render(:file => File.join(Rails.root, 'public/404.html'), :status => 403, :layout => false)
+    end
+  end
 end
