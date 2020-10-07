@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get "/dashboard", to: "users#show"
 
   get '/discover', to: 'discover#index'
+
+  get '/movies', to: 'movies#index'
 end
