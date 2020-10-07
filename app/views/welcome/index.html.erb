@@ -4,5 +4,9 @@
 
 <p>Use this app to coordinate watch parties with your friends.</p>
 
-<%= button_to "Log in", "/login", method: :get %>
-<%= link_to "Register", "/register" %>
+<% if current_user %>
+  <%= button_to "Log out", "/logout", method: :get %>
+<% else %>
+  <%= button_to "Log in", "/login", method: :get %>
+  <%= link_to "Register", "/register" %>
+<% end %>
