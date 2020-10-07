@@ -24,7 +24,7 @@ describe "user login" do
 
     expect(page).to have_button("Log out")
     expect(page).to_not have_button("Log in")
-    expect(page).to_not have_button("Register")
+    expect(page).to_not have_link("Register")
   end
 
   it "allows user to logout" do
@@ -46,5 +46,8 @@ describe "user login" do
     click_button "Log out"
 
     expect(current_path).to eq("/")
+    expect(page).to_not have_button("Log out")
+    expect(page).to have_button("Log in")
+    expect(page).to have_link("Register")
   end
 end
