@@ -1,1 +1,12 @@
 <%= button_to "Log out", "/logout", method: :get %>
+
+<p>Welcome, <%= current_user.name %>!</p>
+
+<%= button_to "Discover Movies", discover_path, method: :get %>
+
+<section class="friends">
+
+</section>
+<section class="parties">
+
+</section>
