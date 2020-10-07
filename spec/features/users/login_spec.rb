@@ -50,4 +50,30 @@ describe "user login" do
     expect(page).to have_button("Log in")
     expect(page).to have_link("Register")
   end
+
+  it "does not allow user to login with bad credentials" do
+    user = create(:user)
+
+    visit root_path
+
+    click_button "Log in"
+
+    expect(current_path).to eq("/login")
+
+    fill_in :email, with: ""
+    fill_in :password, with: user.password
+
+    click_button "Log in"
+
+    expect(page).to have_content("Sorry, your credentials are bad")
+    expect(current_path).to eq("/login")
+
+    fill_in :email, with: user.email
+    fill_in :password, with: "123"
+
+    click_button "Log in"
+
+    expect(page).to have_content("Sorry, your credentials are bad")
+    expect(current_path).to eq("/login")
+  end
 end
