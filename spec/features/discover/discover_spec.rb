@@ -5,7 +5,10 @@ describe "As an authenticated user" do
     before(:each) do
       @user = create(:user)
 
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      visit login_path
+      fill_in :email, with: @user.email
+      fill_in :password, with: @user.password
+      click_button "Log in"
     end
 
     it "should have a button to discover top 40 movies" do
@@ -23,4 +26,14 @@ describe "As an authenticated user" do
       expect(current_path).to eq('/movies')
     end
   end
+
+describe 'As un-authenticated user' do
+  it "I cannot see the discover page" do
+    user = create(:user)
+    visit discover_path
+
+    expect(page).to have_content("The page you were looking for doesn't exist.")
+  end
+end
+
 end
