@@ -12,13 +12,15 @@ describe 'As an authenticated user' do
     end
 
     it "should have a button to discover top 40 movies" do
-      visit movies_path
+      VCR.use_cassette("top_40_rated_movies", allow_playback_repeats: true) do
+        visit movies_path
 
-      click_button "Discover Top 40 Movies"
-      expect(current_path).to eq('/movies')
+        click_button "Discover Top 40 Movies"
+        expect(current_path).to eq('/movies')
+      end
     end
 
-    it "should have a search bar for movies" do
+    xit "should have a search bar for movies" do
       visit movies_path
 
       fill_in :query, with: "My movie"
@@ -27,16 +29,18 @@ describe 'As an authenticated user' do
     end
 
     it "shows top 40 rated movies when I click Discover button" do
-      visit movies_path
+      VCR.use_cassette("top_40_rated_movies", allow_playback_repeats: true) do
+        visit movies_path
 
-      click_button "Discover Top 40 Movies"
+        click_button "Discover Top 40 Movies"
 
-      expect(page).to have_css('.top-rated')
-      expect(page).to have_css('.movie-row', count: 40)
+        expect(page).to have_css('.top-rated')
+        expect(page).to have_css('.movie-row', count: 40)
 
-      within(first('.movie-row')) do
-        expect(page).to have_link("Gabriel's Inferno Part II")
-        expect(page).to have_content(8.9)
+        within(first('.movie-row')) do
+          expect(page).to have_link("Gabriel's Inferno Part II")
+          expect(page).to have_content(8.9)
+        end
       end
     end
 

@@ -10,10 +10,12 @@ describe MovieService do
   end
 
   it "returns 40 top rated movies" do
-    movies = @service.top_rated
+    VCR.use_cassette("top_40_rated_movies") do
+      movies = @service.top_rated
 
-    expect(movies.count).to eq(40)
-    expect(movies.first[:title]).to be_a(String)
-    expect(movies.first[:vote_average]).to be_a(Float)
+      expect(movies.count).to eq(40)
+      expect(movies.first[:title]).to be_a(String)
+      expect(movies.first[:vote_average]).to be_a(Float)
+    end
   end
 end
