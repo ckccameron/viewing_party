@@ -2,10 +2,11 @@ class MovieService
   def top_rated
     movies = []
     i = 0
-    while movies.count < 40
+    while movies.size < 40
       i +=1
       movies << to_json("movie/top_rated?page=#{i}")[:results]
       movies.flatten!
+      break if movies == [nil]
     end
     movies
   end
