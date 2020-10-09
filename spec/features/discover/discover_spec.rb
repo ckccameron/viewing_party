@@ -20,15 +20,17 @@ describe "As an authenticated user" do
       end
     end
 
-    xit "should have a search bar for movies" do
+    it "should have a search bar for movies" do
+      VCR.use_cassette("inception_search_results") do
         visit discover_path
 
-        fill_in :query, with: "My movie"
+        fill_in :query, with: "Inception"
         click_button "Search"
         expect(current_path).to eq('/movies')
       end
     end
   end
+end
 
   describe 'As un-authenticated user' do
     it "I cannot see the discover page" do
