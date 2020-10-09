@@ -46,8 +46,8 @@ describe 'As an authenticated user' do
 
     it "shows a no results message if there are no matching results" do
       json_response = File.read("spec/fixtures/empty_body_for_top_rated_movies.json")
-      stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV["TMDB-API-KEY"]}&page=1").to_return(status: 200, body: json_response, headers: {})
-      stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV["TMDB-API-KEY"]}&page=2").to_return(status: 200, body: json_response, headers: {})
+      stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV["TMDB_API_KEY"]}&page=1").to_return(status: 200, body: json_response, headers: {})
+      stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV["TMDB_API_KEY"]}&page=2").to_return(status: 200, body: json_response, headers: {})
 
       visit movies_path
 

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/movie/top_rated?api_key=TMDB-API-KEY&page=1
+    uri: https://api.themoviedb.org/3/movie/top_rated?api_key=TMDB_API_KEY&page=1
     body:
       encoding: US-ASCII
       string: ''
@@ -56,7 +56,7 @@ http_interactions:
   recorded_at: Thu, 08 Oct 2020 21:33:52 GMT
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/movie/top_rated?api_key=TMDB-API-KEY&page=2
+    uri: https://api.themoviedb.org/3/movie/top_rated?api_key=TMDB_API_KEY&page=2
     body:
       encoding: US-ASCII
       string: ''
