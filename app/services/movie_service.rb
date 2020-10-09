@@ -1,13 +1,23 @@
 class MovieService
   def top_rated
+    aggregator("movie/top_rated")
+  end
+
+  def search(query)
+    params = { query: query }
+    aggregator("search/movie", params)
+  end
+
+  def aggregator(url, params = {})
     movies = []
     page = 0
     while movies.size < 40
       page +=1
-      params = { page: page }
-      movies << to_json("movie/top_rated", params)[:results]
+      params[:page] = page
+      page_content = to_json(url, params)[:results]
+      movies << page_content
       movies.flatten!
-      break if movies == [nil]
+      break if movies.include?(nil) || page_content.size < 20
     end
     movies
   end
