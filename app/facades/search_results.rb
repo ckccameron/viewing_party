@@ -4,6 +4,11 @@ class SearchResults
     json.map {|data| movie(data)} unless json.compact.empty?
   end
 
+  def self.movie_search(query)
+    json = service.search(query)
+    json.map {|data| movie(data)} unless json.compact.empty?
+  end
+
   private
 
   def self.service
