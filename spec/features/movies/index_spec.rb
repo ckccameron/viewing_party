@@ -20,13 +20,14 @@ describe 'As an authenticated user' do
       end
     end
 
-    xit "should have a search bar for movies" do
-      VCR.use_cassette("inception_search_results") do
+    it "should have a search bar for movies" do
+      VCR.use_cassette("top_40_rated_movies", allow_playback_repeats: true) do
         visit movies_path
-
-        fill_in :query, with: "Inception"
-        click_button "Search"
-        expect(current_path).to eq('/movies')
+        VCR.use_cassette("inception_search_results") do
+          fill_in :query, with: "Inception"
+          click_button "Search"
+          expect(current_path).to eq('/movies')
+        end
       end
     end
 
@@ -48,7 +49,9 @@ describe 'As an authenticated user' do
 
     it "shows a no results message if there are no matching results" do
       json_response = File.read("spec/fixtures/empty_body_for_top_rated_movies.json")
+
       stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV["TMDB_API_KEY"]}&page=1").to_return(status: 200, body: json_response, headers: {})
+
       stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV["TMDB_API_KEY"]}&page=2").to_return(status: 200, body: json_response, headers: {})
 
       visit movies_path
