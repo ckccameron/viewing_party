@@ -23,10 +23,12 @@ describe 'As an authenticated user' do
     it "should have a search bar for movies" do
       VCR.use_cassette("top_40_rated_movies", allow_playback_repeats: true) do
         visit movies_path
+
         VCR.use_cassette("inception_search_results") do
           fill_in :query, with: "Inception"
           click_button "Search"
           expect(current_path).to eq('/movies')
+
           page.all('.movie-row').each do |movie|
             expect(movie).to have_content('Inception')
           end

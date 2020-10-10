@@ -12,9 +12,8 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
   def require_login
-    unless logged_in?
-      render(:file => File.join(Rails.root, 'public/404.html'), :status => 404, :layout => false)
-    end
+    render(file: Rails.root.join('public/404.html'), status: :not_found, layout: false) unless logged_in?
   end
 end
