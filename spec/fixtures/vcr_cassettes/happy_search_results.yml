@@ -1,0 +1,223 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=SECRET_TMDB_API_KEY&page=1&query=happy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 09 Oct 2020 02:50:20 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=120
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 b7525c99752d4c74ac370828dee9ad1c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Amz-Cf-Id:
+      - 3q1W3EDmbe-4dnRpdOHYc1VlxQAzMusK1gdlguUwBoilH7qS6xp9iQ==
+      Age:
+      - '17'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"total_results":1379,"total_pages":69,"results":[{"popularity":86.866,"id":721656,"video":false,"vote_count":8,"vote_average":8.1,"title":"Happy
+        Halloween, Scooby-Doo!","release_date":"2020-10-06","original_language":"en","original_title":"Happy
+        Halloween, Scooby-Doo!","genre_ids":[16,10751,9648,35,80],"backdrop_path":"\/5gTQmnGYKxDfmUWJ9GUWqrszRxN.jpg","adult":false,"overview":"Scooby-Doo
+        and the gang team up with their pals, Bill Nye The Science Guy and Elvira
+        Mistress of the Dark, to solve this mystery of gigantic proportions and save
+        Crystal Cove!","poster_path":"\/5aL71e0XBgHZ6zdWcWeuEhwD2Gw.jpg"},{"popularity":19.294,"vote_count":3560,"video":false,"poster_path":"\/za41IHkj6LnkilfTzv5B2qmthKD.jpg","id":9836,"adult":false,"backdrop_path":"\/9DUAR7p4SGqt2ISH2lmSzNx3uni.jpg","original_language":"en","original_title":"Happy
+        Feet","genre_ids":[16,35,10751],"title":"Happy Feet","vote_average":6.1,"overview":"Into
+        the world of the Emperor Penguins, who find their soul mates through song,
+        a penguin is born who cannot sing. But he can tap dance something fierce!","release_date":"2006-11-16"},{"popularity":23.979,"vote_count":206,"video":false,"poster_path":"\/r3xY0tCI05iUmm8M7fAkKtqGPXM.jpg","id":454699,"adult":false,"backdrop_path":"\/jFSwrtsYJ0QesgPrvShQNOTn8aV.jpg","original_language":"en","original_title":"Happy
+        Family","genre_ids":[16,35,14,10751],"title":"Happy Family","vote_average":5.7,"overview":"The
+        Wishbone family is far from happy. With a struggling bookshop, an overworked
+        husband, and two misunderstood teenagers, Emma is at her wit''s end trying
+        to be the perfect mom. After dragging her family to a costume party on Halloween
+        night, they are cursed by an evil witch and transformed into a Vampire, a
+        Mummy, a Werewolf, and Frankenstein''s monster. Now Emma will fight to keep
+        her Monster Family together and uncover the secret of their curse... eventually
+        leading them to the Prince of Darkness himself, Dracula!","release_date":"2017-08-24"},{"popularity":18.213,"vote_count":1697,"video":false,"poster_path":"\/4RnCeRzvI1xk5tuNWjpDKzSnJDk.jpg","id":9614,"adult":false,"backdrop_path":"\/hhjHa5o45vRuLIpw98EA41yFtw7.jpg","original_language":"en","original_title":"Happy
+        Gilmore","genre_ids":[35],"title":"Happy Gilmore","vote_average":6.6,"overview":"Failed
+        hockey player-turned-golf whiz Happy Gilmore -- whose unconventional approach
+        and antics on the grass courts the ire of rival Shooter McGavin -- is determined
+        to win a PGA tournament so he can save his granny''s house with the prize
+        money. Meanwhile, an attractive tour publicist tries to soften Happy''s image.","release_date":"1996-02-16"},{"popularity":23.62,"vote_count":997,"video":false,"poster_path":"\/2gWiQ4mn85jcXtREVePlVViupeV.jpg","id":65759,"adult":false,"backdrop_path":"\/jiY7dnAtkvM1UykifM0RJAhZLY6.jpg","original_language":"en","original_title":"Happy
+        Feet Two","genre_ids":[16,35,10751],"title":"Happy Feet Two","vote_average":6,"overview":"Mumble
+        the penguin has a problem: his son Erik, who is reluctant to dance, encounters
+        The Mighty Sven, a penguin who can fly! Things get worse for Mumble when the
+        world is shaken by powerful forces, causing him to brings together the penguin
+        nations and their allies to set things right.","release_date":"2011-11-17"},{"popularity":26.515,"vote_count":4376,"video":false,"poster_path":"\/cTaEIUYTt52ooq9quVbAQ7NpGwo.jpg","id":440021,"adult":false,"backdrop_path":"\/eGx5OfOdvM0gkHdmkLe3hcJuEIT.jpg","original_language":"en","original_title":"Happy
+        Death Day","genre_ids":[35,27,9648,53,10749],"title":"Happy Death Day","vote_average":6.6,"overview":"Caught
+        in a bizarre and terrifying time warp, college student Tree finds herself
+        repeatedly reliving the day of her murder, ultimately realizing that she must
+        identify the killer and the reason for her death before her chances of survival
+        run out.","release_date":"2017-10-12"},{"popularity":33.126,"vote_count":2085,"video":false,"poster_path":"\/4tdnePOkOOzwuGPEOAHp8UA4vqx.jpg","id":512196,"adult":false,"backdrop_path":"\/v99NrmuSYn4HGwwpHWEkMVSeAL3.jpg","original_language":"en","original_title":"Happy
+        Death Day 2U","genre_ids":[35,27,878],"title":"Happy Death Day 2U","vote_average":6.3,"overview":"Collegian
+        Tree Gelbman wakes up in horror to learn that she''s stuck in a parallel universe.
+        Her boyfriend Carter is now with someone else, and her friends and fellow
+        students seem to be completely different versions of themselves. When Tree
+        discovers that Carter''s roommate has been altering time, she finds herself
+        once again the target of a masked killer. When the psychopath starts to go
+        after her inner circle, Tree soon realizes that she must die over and over
+        again to save everyone.","release_date":"2019-02-13"},{"popularity":15.167,"vote_count":109,"video":false,"poster_path":"\/sXivK7WYX784TiarvX7qL0232T8.jpg","id":427214,"adult":false,"backdrop_path":"\/2UYTeccpmz8O0OkhhzIcIoHvKyE.jpg","original_language":"en","original_title":"The
+        Happy Prince","genre_ids":[18],"title":"The Happy Prince","vote_average":6.6,"overview":"In
+        1895, Oscar Wilde (1854-1900) was the most famous writer in London, and Bosie
+        Douglas, son of the notorious Marquess of Queensberry, was his lover. Accused
+        and convicted of gross indecency, he was imprisoned for two years and subjected
+        to hard labor. Once free, he abandons England to live in France, where he
+        will spend his last years, haunted by memories of the past, poverty and immense
+        sadness.","release_date":"2018-04-12"},{"popularity":11.563,"vote_count":163,"video":false,"poster_path":"\/nQYX248aotb6ma6QxJ14utYEYoD.jpg","id":451563,"adult":false,"backdrop_path":"\/ai16vB3j857Ilmebz8WmjxHqesA.jpg","original_language":"en","original_title":"Happy
+        Anniversary","genre_ids":[35,10749],"title":"Happy Anniversary","vote_average":5.8,"overview":"A
+        quirky couple spends their three-year dating anniversary looking back at their
+        relationship and contemplating whether they should break up.","release_date":"2018-03-30"},{"popularity":11.883,"vote_count":264,"video":false,"poster_path":"\/8uZWD1LUX47AkyNIznFHKvAXRaL.jpg","id":10503,"adult":false,"backdrop_path":"\/nrKkpJ4qOWWXl2v4a9UAw5nXYex.jpg","original_language":"en","original_title":"Happy-Go-Lucky","genre_ids":[35,18],"title":"Happy-Go-Lucky","vote_average":6.6,"overview":"A
+        look at a few chapters in the life of Poppy, a cheery, colorful, North London
+        schoolteacher whose optimism tends to exasperate those around her.","release_date":"2008-04-18"},{"popularity":6.802,"vote_count":45,"video":false,"poster_path":"\/wAz3VHk0nyeottwGc3lOFHi3Hky.jpg","id":86577,"adult":false,"backdrop_path":null,"original_language":"en","original_title":"Happy","genre_ids":[99],"title":"Happy","vote_average":7.2,"overview":"Happy
+        is a 2011 feature documentary film directed, written, and co-produced by Roko
+        Belic. It explores human happiness through interviews with people from all
+        walks of life in 14 different countries, weaving in the newest findings of
+        positive psychology. Director Roko Belic was originally inspired to create
+        the film after producer\/director Tom Shadyac (Liar, Liar, Patch Adams, Bruce
+        Almighty) showed him an article in the New York Times entitled \"A New Measure
+        of Well Being From a Happy Little Kingdom\". The article ranks the United
+        States as the 23rd happiest country in the world. Shadyac then suggested that
+        Belic make a documentary about happiness. Belic spent several years interviewing
+        over 20 people, ranging from leading happiness researchers to a rickshaw driver
+        in Kolkatta, a family living in a \"co-housing community\" in Denmark, a woman
+        who was run over by a truck, a Cajun fisherman, and more.","release_date":"2011-04-09"},{"popularity":11.153,"vote_count":46,"video":false,"poster_path":"\/jJL7JPZmBqc8ZKTrLWwLAfwYf4L.jpg","id":59507,"adult":false,"backdrop_path":"\/nqKgKuW6adgg1BMdZCLlOdGrGJ5.jpg","original_language":"fr","original_title":"Happy
+        Few","genre_ids":[10749],"title":"Four Lovers","vote_average":6.1,"overview":"Mutual
+        attraction leads two married couples to swap bedtime partners.","release_date":"2010-09-15"},{"popularity":9.791,"id":399031,"video":false,"vote_count":229,"vote_average":6.1,"title":"Happy
+        End","release_date":"2017-06-21","original_language":"fr","original_title":"Happy
+        End","genre_ids":[18],"backdrop_path":"\/97mRqLyRHDeNd3rdHukMu7u46hN.jpg","adult":false,"overview":"A
+        middle-class family living in Calais deal with a series of setbacks while
+        paying little attention to the grim conditions in the refugee camps within
+        a few miles of their home.","poster_path":"\/5WFAhDRCumstxoqBiE7W5ujxc0j.jpg"},{"popularity":13.393,"vote_count":95,"video":false,"poster_path":"\/kkninPcvCZNt3QFydpwm6b7Nd4j.jpg","id":51017,"adult":false,"backdrop_path":"\/hJA778fYX6YlDTKCSW9t6mi4bER.jpg","original_language":"en","original_title":"Madea''s
+        Big Happy Family","genre_ids":[35,18],"title":"Madea''s Big Happy Family","vote_average":6.9,"overview":"Shirley
+        has important news for her family, but she has five grown children with different
+        lifestyles and finds it difficult to get them and the kids all together. So
+        in steps Madea, the Matriarch General, to put the family''s life in perspective
+        with a hilarious twist on financial difficulties, drugs and, most important,
+        family secrets. The next generation has a lot to learn. In her own way, Madea
+        expresses how deliverance won''t change you to be someone else, but will allow
+        you to be who you really are.","release_date":"2011-04-22"},{"popularity":10.069,"vote_count":66,"video":false,"poster_path":"\/76Hq3Buq6SIOe5Z7f5APwh1s7vU.jpg","id":14922,"adult":false,"backdrop_path":"\/suEp7zP4UMkTBUgMoH33bdTJyi1.jpg","original_language":"en","original_title":"Happy
+        Endings","genre_ids":[35,18,10749],"title":"Happy Endings","vote_average":5.7,"overview":"An
+        ensemble cast telling 10 stories with intertwining characters. One story is
+        about a father and son who are dating the same woman . Another features a
+        woman who long ago gave her baby up for adoption but is now being blackmailed
+        by a documentary filmmaker who claims to know the now-grown child''s whereabouts.","release_date":"2005-01-20"},{"popularity":11.3,"vote_count":110,"video":false,"poster_path":"\/gjOQUlsprWkmyZP4hhMGr0GP3LG.jpg","id":244534,"adult":false,"backdrop_path":"\/u6bI2JSZjAxjnhgy6jcUEdyBrAV.jpg","original_language":"en","original_title":"Happy
+        Christmas","genre_ids":[35,18],"title":"Happy Christmas","vote_average":5.2,"overview":"After
+        a breakup with her boyfriend, a young woman moves in with her older brother,
+        his wife, and their 2-year-old son.","release_date":"2014-06-26"},{"popularity":8.824,"vote_count":53,"video":false,"poster_path":"\/cvFE9RlFHTobOEceRyf9iQLPHSk.jpg","id":412762,"adult":false,"backdrop_path":"\/eC8Y6plhvkrIunRdDNNMXbs8E9Z.jpg","original_language":"en","original_title":"Happy
+        Hunting","genre_ids":[27,53],"title":"Happy Hunting","vote_average":5,"overview":"An
+        alcoholic drifter must battle withdrawal and psychotic rednecks after he becomes
+        the target of a deranged sporting event.","release_date":"2017-09-22"},{"popularity":10.683,"id":641543,"video":false,"vote_count":4,"vote_average":5.3,"title":"Happy
+        Endings Sleepover","release_date":"2019-12-13","original_language":"en","original_title":"Happy
+        Endings Sleepover","genre_ids":[18],"backdrop_path":"\/oHBi9ePvj9JgDnP0OcynwiOyklL.jpg","adult":false,"overview":"American
+        CIA Field Operative, Johnnie Allen, is assigned to Denmark for his first mission.
+        An American spy highly placed in the Kremlin is to be spirited out of Russia,
+        and it is Johnnie''s job to get him safely to Antwerp where the agent will
+        board a freighter. Johnnie, who is a young gay man, meets and falls in love
+        with a Danish lad named Sander, who is apparently straight. Wanting to keep
+        his friend close to him, he makes the mistake of bringing him on the mission.
+        What will become of their friendship if Johnnie confesses his love to Sander?
+        And is the Russian agent all he seems to be? Set against a backdrop of European
+        espionage, Happy Endings Sleepover is a celebration of gay youth in a world
+        where love should never be Top-Secret.","poster_path":"\/s3bowpLhneXetPOlQLZRFFKyczw.jpg"},{"popularity":9.508,"vote_count":78,"video":false,"poster_path":"\/xGyRqTuJ3jraZU8uAO7nLAvr9vJ.jpg","id":22230,"adult":false,"backdrop_path":"\/vxCkjTricIjiSlBCBuzlIOFYisP.jpg","original_language":"en","original_title":"Happy
+        Accidents","genre_ids":[35,878,10749],"title":"Happy Accidents","vote_average":6.9,"overview":"A
+        comedy that pays tribute to the science fiction genre -- specifically, the
+        sub-genre of time travel. But here the alternate reality is contemporary New
+        York City where past and future experiences of trust, commitment and denial
+        are cleverly put to the test. Just as Ruby is beginning to relish her first-ever
+        healthy relationship, Sam begins muttering about being a time traveler from
+        the year 2470.","release_date":"2000-01-25"},{"popularity":7.431,"id":24066,"video":false,"vote_count":78,"vote_average":5.5,"title":"Happy,
+        Texas","release_date":"1999-12-03","original_language":"en","original_title":"Happy,
+        Texas","genre_ids":[35,80,10749],"backdrop_path":"\/ucyVn52YQRX6n6F0jGLuZrEONcK.jpg","adult":false,"overview":"Two
+        escaped convicts roll into the village of Happy, Texas, where they''re mistaken
+        for a gay couple who work as beauty pageant consultants. They go along with
+        it to duck the police, but the local sheriff has a secret of his own.","poster_path":"\/xARM6mHWSIvaN9heEe0GRoJ2OVS.jpg"}]}'
+  recorded_at: Fri, 09 Oct 2020 02:50:38 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=SECRET_TMDB_API_KEY&page=2&query=happy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 09 Oct 2020 02:50:20 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=120
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 73d19185010f59660dbc34d3082b186b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Amz-Cf-Id:
+      - TLvOFWrNV_uVX3e_Md2AKRyyipE96KGm0R-mJF2jcSgEHG8ok1nr2w==
+      Age:
+      - '18'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoyLCJ0b3RhbF9yZXN1bHRzIjoxMzc5LCJ0b3RhbF9wYWdlcyI6NjksInJlc3VsdHMiOlt7InBvcHVsYXJpdHkiOjkuMjYzLCJ2b3RlX2NvdW50IjoxNTQsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcLzRBb09GVGRwV09iMnRCVXJKQjJiSkY0MjdFbS5qcGciLCJpZCI6Mjc3NDMyLCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL2NEWEJXQk9zTXUxc1BJem5ENkx3aDNCbDVqSi5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImhpIiwib3JpZ2luYWxfdGl0bGUiOiJIYXBweSBOZXcgWWVhciIsImdlbnJlX2lkcyI6WzI4LDM1LDgwXSwidGl0bGUiOiJIYXBweSBOZXcgWWVhciIsInZvdGVfYXZlcmFnZSI6NS45LCJvdmVydmlldyI6IlNpeCB3b3VsZC1iZSB0aGlldmVzIGVudGVyIGEgcHJlc3RpZ2lvdXMgZGFuY2UgY29tcGV0aXRpb24gYXMgYSBjb3ZlciBmb3IgdGhlaXIgbGFyZ2VyIGdvYWwgb2YgcHVsbGluZyBvZmYgYSBtYWpvciBoZWlzdCIsInJlbGVhc2VfZGF0ZSI6IjIwMTQtMTAtMjMifSx7InBvcHVsYXJpdHkiOjUuMTE2LCJ2b3RlX2NvdW50Ijo3LCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC9nZjQ5MzNaMDdRYUl3b1RYcnVsQk1zbDlYR0IuanBnIiwiaWQiOjQxNDI4MCwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC80Vzg5UFpjNHJ2VUdFMzRzSFJxcGVVMnlsSk0uanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiSGFwcHkiLCJnZW5yZV9pZHMiOlszNSwxOCwxMDc0OV0sInRpdGxlIjoiSGFwcHkiLCJ2b3RlX2F2ZXJhZ2UiOjQuOSwib3ZlcnZpZXciOiJGbG9yZW50LCAyMywgaXMgYW4gdXBwZXIgY2xhc3MgUGFyaXNpYW4gd2hvIGRyZWFtcyBvZiBnb2luZyBiYWNrIHRvIEFtZXJpY2EsIHdoZXJlIGhlIGF0dGVuZGVkIGNvbGxlZ2UuIE9uZSBzdW1tZXIgaGUgbWVldHMgQWxlc3NpYSwgYW4gQW1lcmljYW4gZ2lybCwgbG9zdCBpbiB0aGUgc3RyZWV0cyBvZiBQYXJpcy4gVG9nZXRoZXIgYW5kIHdpdGggcmFuZG9tIGVuY291bnRlcnMgd2hpbGUgb24gYSBqb3VybmV5IGZyb20gUGFyaXMgdG8gTm9ybWFuZHksIHRoZXkgZXhwbG9yZSB0aGVpciBwYXNzaW9ucywgd2hpY2ggZHJhd3MgdGhlbSBjbG9zZXIgYXMgd2VsbCBhcyBicmluZ3MgdXAgdGhlaXIgY2xhc2hpbmcgZGlmZmVyZW5jZXMuIEFzIHRoZXkgZmFjZSBhIGNydWNpYWwgY3Jvc3Nyb2FkIGluIHRoZWlyIGxpdmVzLCB0aGV5IHdpbGwgdW5jb3ZlciBuZXcgc2lkZXMgb2YgdGhlbXNlbHZlcywgc3RydWdnbGluZyB0byBkZXRlcm1pbmUgd2hvIHRoZXkgYXJlIHBlcnNvbmFsbHksIHByb2Zlc3Npb25hbGx5IGFuZCBzZXh1YWxseSB3aGlsZSB0byBicmVhayBmcmVlIGZyb20gdGhlaXIgdXBicmluZ2luZ3Mu4oCLIiwicmVsZWFzZV9kYXRlIjoiMjAxNS0wOC0yMyJ9LHsicG9wdWxhcml0eSI6NS40NzksInZvdGVfY291bnQiOjIyNCwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvcFdyZkl2eWd4YkpUT3JxTVZxVURXdnYxQXRvLmpwZyIsImlkIjo0Mjg5MiwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC83RHZzWGxTcVpoUElWRVZtdXRIbzBZY3hWZ28uanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJpdCIsIm9yaWdpbmFsX3RpdGxlIjoiSGFwcHkgRmFtaWx5IiwiZ2VucmVfaWRzIjpbMzVdLCJ0aXRsZSI6IkhhcHB5IEZhbWlseSIsInZvdGVfYXZlcmFnZSI6Ni41LCJvdmVydmlldyI6IkEgYmxvY2tlZCBzY3JlZW53cml0ZXIsIEV6aW8gKEZhYmlvIERlIEx1aWdpKSwgaXMgdHJ5aW5nIHRvIGZpbmlzaCBhIHN0b3J5IGFib3V0IHR3byBvZmYta2lsdGVyIGZhbWlsaWVzIHRocm93biB0b2dldGhlciB3aGVuIHRoZWlyIHRlZW5hZ2UgY2hpbGRyZW4gYW5ub3VuY2UgdGhleeKAmXJlIGdldHRpbmcgbWFycmllZC4gU28gRXppbyB3cml0ZXMgaGltc2VsZiBpbnRvIHRoZSBzdG9yeSB3aXRoIGEgcm9tYW50aWMgcGFydOKAlGEgZGV2ZWxvcG1lbnQgaGlzIGNoYXJhY3RlcnMgd2VsY29tZSwgYXMgdGhleeKAmXZlIGdvdCBzb21lIGlkZWFzIG9mIHRoZWlyIG93biBmb3IgYmlnZ2VyIGFuZCBiZXR0ZXIgcm9sZXMuIiwicmVsZWFzZV9kYXRlIjoiMjAxMC0wMy0yNiJ9LHsicG9wdWxhcml0eSI6MTEuNTM2LCJ2b3RlX2NvdW50IjoxNzIsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL3luSE90NmZBa1hESnlmczNyOGd1QVIxNVdQLmpwZyIsImlkIjo0MDA2MDgsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvbmljRG82U25CeEs5M1JPR0FocEtUT0FoeTJpLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkJvIEJ1cm5oYW06IE1ha2UgSGFwcHkiLCJnZW5yZV9pZHMiOlszNSw5OSwxMDQwMl0sInRpdGxlIjoiQm8gQnVybmhhbTogTWFrZSBIYXBweSIsInZvdGVfYXZlcmFnZSI6OC4yLCJvdmVydmlldyI6IkNvbWJpbmluZyBoaXMgdHJhZGVtYXJrIHdpdCBhbmQgc2VsZi1kZXByZWNhdGluZyBodW1vciB3aXRoIG9yaWdpbmFsIG11c2ljLCBCbyBCdXJuaGFtIG9mZmVycyB1cCBoaXMgdW5pcXVlIHR3aXN0IG9uIGxpZmUgaW4gdGhpcyBzdGFuZC11cCBzcGVjaWFsIGFib3V0ICBsaWZlLCBkZWF0aCwgc2V4dWFsaXR5LCBoeXBvY3Jpc3ksIG1lbnRhbCBpbGxuZXNzIGFuZCBQcmluZ2xlcyBjYW5zLiIsInJlbGVhc2VfZGF0ZSI6IjIwMTYtMDYtMDMifSx7InBvcHVsYXJpdHkiOjguMTQ3LCJpZCI6NjMxODg0LCJ2aWRlbyI6ZmFsc2UsInZvdGVfY291bnQiOjAsInZvdGVfYXZlcmFnZSI6MCwidGl0bGUiOiJIYXBweSBTdWljaWRlIiwicmVsZWFzZV9kYXRlIjoiMjAyMC0xMi0xMSIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkhhcHB5IFN1aWNpZGUiLCJnZW5yZV9pZHMiOls1M10sImJhY2tkcm9wX3BhdGgiOm51bGwsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJBIHdvbWFuIHdhbnRzIHRvIHByb3RlY3QgaGVyIGxvdmVyIGZyb20gYSBob3JyaWJsZSBzZWNyZXQgYW5kIHNoZSBtYWtlcyBhIGRlY2lzaW9uIHRvIHByb3RlY3QgaGltIGFuZCBoaXMgY2hpbGQgZXZlbiBpZiBzaGUgbG9zdCBoZXIgb3duIGxpZmUgYmVjYXVzZSBzaGUgdGhvdWdodCB0aGF0IGlzIGxvdmUgdW5jb25kaXRpb25hbGx5LiIsInBvc3Rlcl9wYXRoIjpudWxsfSx7InBvcHVsYXJpdHkiOjYuOTQ0LCJ2b3RlX2NvdW50IjoyNywidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvMTQ1UE81R0RNVmhhaXdCN2lkaW5yOUxhNFVVLmpwZyIsImlkIjo0MDY2MjUsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6Ilwvcmp6VldINGdRM1p6RUhhT3ZZd3FKWWhVejd1LmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkhhcHB5IEJpcnRoZGF5IiwiZ2VucmVfaWRzIjpbMjcsNTNdLCJ0aXRsZSI6IkhhcHB5IEJpcnRoZGF5Iiwidm90ZV9hdmVyYWdlIjo0LjQsIm92ZXJ2aWV3IjoiV2hlbiB0d28gZnJpZW5kcyBlbWJhcmsgb24gYSBqb3VybmV5IHRvIE1leGljYWxpIGZvciBhIEJpcnRoZGF5IGNlbGVicmF0aW9uLCB0aGV5IHNvb24gcmVhbGl6ZSB0aGVpciBwc3ljaGVkZWxpYyBzaGVuYW5pZ2FucyBoYXZlIHRha2VuIGEgdHVybiBmb3IgdGhlIHdvcnNlLiIsInJlbGVhc2VfZGF0ZSI6IjIwMTYtMDgtMTUifSx7InBvcHVsYXJpdHkiOjUuODQyLCJ2b3RlX2NvdW50IjozNywidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvM2VrcXBJd3c1NmhZRFNzVkZVN0djTmZvQkd2LmpwZyIsImlkIjo1NTA1OSwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC85U1I4V0R0TWpVOXBQRjFodlJpbFl5Y2szRWIuanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiSGFwcHkgVG9nZXRoZXIiLCJnZW5yZV9pZHMiOlszNSwxMDc0OV0sInRpdGxlIjoiSGFwcHkgVG9nZXRoZXIiLCJ2b3RlX2F2ZXJhZ2UiOjUuOCwib3ZlcnZpZXciOiJDaHJpc3RvcGhlciBpcyBhbiBhbWJpdGlvdXMgY29sbGVnZSBmcmVzaG1hbiwgc3RyaXZpbmcgdG8gYmVjb21lIGEgd3JpdGVyLiBUaHJvdWdoIGEgY29tcHV0ZXIgZmF1bHQgaGUncyBhc3NpZ25lZCB0aGUgc2FtZSByb29tIGFzIEFsZXgsIGEgcmVhbCBwYXJ0eSBmcmVhayBhbmQuLi4gYSBnaXJsISBIZSdzIGFubm95ZWQgYW5kIHRyaWVzIHRvIGdldCBhIGRpZmZlcmVudCByb29tIGFzIHNvb24gYXMgcG9zc2libGUsIGJ1dCB3aGVuIGhlIGxlYXJucyB0byBrbm93IGhlciwgaGUgYWxzbyBzdGFydHMgdG8gbGlrZSBoZXIuIFNoZSBub3Qgb25seSBpbXByb3ZlcyBoaXMgc2V4dWFsIGxpZmUsIGJ1dCBhbHNvIGhpcyB3cml0aW5nIHNraWxscyIsInJlbGVhc2VfZGF0ZSI6IjE5ODktMDUtMDQifSx7InBvcHVsYXJpdHkiOjEwLjY3LCJ2b3RlX2NvdW50Ijo4NSwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwveXhHWXBXNDNVelp1eTR5dkNQNlJ6YjV3eXZTLmpwZyIsImlkIjozNzkzNiwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC84ZUU5YzVGMGFGQlhMdkE5ZGFCR3JVdGtxbWYuanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiSGFwcHkgQmlydGhkYXkgdG8gTWUiLCJnZW5yZV9pZHMiOlsxOCwyNyw5NjQ4LDUzXSwidGl0bGUiOiJIYXBweSBCaXJ0aGRheSB0byBNZSIsInZvdGVfYXZlcmFnZSI6Ni4xLCJvdmVydmlldyI6IlZpcmdpbmlhIGlzIHByb3VkIHRoYXQgc2hlIGJlbG9uZ3MgdG8gYSBjbGlxdWUuIFRoZSBiZXN0IHN0dWRlbnRzIGF0IGEgcHJpdmF0ZSBzY2hvb2wuIEJ1dCBiZWZvcmUgaGVyIDE4dGggYmlydGhkYXksIGEgZ3J1ZWxpbmcgc2V0IG9mIG11cmRlcnMgdGFrZSBwbGFjZSBhbmQgaGVyIGZyaWVuZHMgYXJlIHRoZSBvbmVzIHdobyBhcmUgZmFsbGluZyBwcmV5LiBDb3VsZCBpdCBiZSBoZXI/IFNoZSBzdWZmZXJzIGZyb20gYmxhY2tvdXRzIGR1ZSB0byBhIGZyZWFrIGFjY2lkZW50IG9uZSB5ZWFyIGVhcmxpZXIuIFdlIHNvb24gbGVhcm4gdGhlIHRydXRoIGJlaGluZCBoZXIgYWNjaWRlbnQgYW5kIHdoYXQgaXMgZ29pbmcgb24uLi4iLCJyZWxlYXNlX2RhdGUiOiIxOTgxLTA1LTE1In0seyJwb3B1bGFyaXR5IjoxMC40MTMsInZvdGVfY291bnQiOjEwLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC94eHNnQm9xN3pROWdxNHB0ZVNTVjBCb29pQmguanBnIiwiaWQiOjUxMjU4NCwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC9oRXNndjFraU5LQzc5ajRrOURkc0JNcVFxc1AuanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiVHJpY28gVHJpIEhhcHB5IEhhbGxvd2VlbiIsImdlbnJlX2lkcyI6WzM1LDI3LDEwNzUxXSwidGl0bGUiOiJUcmljbyBUcmkgSGFwcHkgSGFsbG93ZWVuIiwidm90ZV9hdmVyYWdlIjo0LjEsIm92ZXJ2aWV3IjoiQSBmYW1pbHkgbW92ZXMgYmFjayB0byBNaWFtaSB0byB0YWtlIGNhcmUgb2YgaXRzIHdpZG93ZWQgYWJ1ZWxhLiBBZnRlciBtb3ZpbmcgaW50byBhIGhhdW50ZWQgaG91c2UsIHRoZSBmYW1pbHkgbGVhcm5zIHRoZSBpbnRlbnRpb25zIG9mIHRoZSBnaG9zdHMgdGhhdCBpbmhhYml0IGl0LiIsInJlbGVhc2VfZGF0ZSI6IjIwMTgtMDktMjgifSx7InBvcHVsYXJpdHkiOjExLjA5OSwidm90ZV9jb3VudCI6NzgsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL3RmZ2E3UWw2M0ZtWklHUUlKeE8yS3hhYU5GUi5qcGciLCJpZCI6MjAzMzIxLCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6Ik5vdCBBbm90aGVyIEhhcHB5IEVuZGluZyIsImdlbnJlX2lkcyI6WzM1LDE4LDEwNzQ5XSwidGl0bGUiOiJOb3QgQW5vdGhlciBIYXBweSBFbmRpbmciLCJ2b3RlX2F2ZXJhZ2UiOjYuMywib3ZlcnZpZXciOiJXaGVuIGEgc3RydWdnbGluZyBwdWJsaXNoZXIgZGlzY292ZXJzIGhpcyBvbmx5IHN1Y2Nlc3NmdWwgYXV0aG9yIGlzIGJsb2NrZWQgaGUga25vd3MgaGUgaGFzIHRvIHVuYmxvY2sgaGVyIG9yIGhlJ3MgZmluaXNoZWQuIFdpdGggaGVyIG5ld2ZvdW5kIHN1Y2Nlc3MsIHNoZSdzIGJlY29tZSB0b28gZGFtbiBoYXBweSBhbmQgc2hlIGNhbid0IHdyaXRlIHdoZW4gc2hlJ3MgaGFwcHkuVGhlIG9ubHkgdHJvdWJsZSBpcywgdGhlIHdvcnNlIGhlIG1ha2VzIGhlciBmZWVsLCB0aGUgbW9yZSBoZSByZWFsaXNlcyBoZSdzIGluIGxvdmUgd2l0aCBoZXIuIiwicmVsZWFzZV9kYXRlIjoiMjAxMy0xMC0xMSJ9LHsicG9wdWxhcml0eSI6Ny41MDcsInZvdGVfY291bnQiOjcyLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC92Q3UyMmxIZkx2OWtVWUF2eExhQUNBOGw5Uk8uanBnIiwiaWQiOjYwNDIyLCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL2VBWGxQQW5CbnlqdG9YTkE5dkZnZ1UySUtXRi5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJBbm90aGVyIEhhcHB5IERheSIsImdlbnJlX2lkcyI6WzM1LDE4XSwidGl0bGUiOiJBbm90aGVyIEhhcHB5IERheSIsInZvdGVfYXZlcmFnZSI6NS44LCJvdmVydmlldyI6IkEgd2VkZGluZyBhdCBoZXIgcGFyZW50cycgQW5uYXBvbGlzIGVzdGF0ZSBodXJscyBoaWdoLXN0cnVuZyBMeW5uIGludG8gdGhlIGNlbnRlciBvZiB0b3VjaHkgZmFtaWx5IGR5bmFtaWNzLiIsInJlbGVhc2VfZGF0ZSI6IjIwMTEtMTEtMTgifSx7InBvcHVsYXJpdHkiOjUuNTM1LCJpZCI6MzkwNzIsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MTUsInZvdGVfYXZlcmFnZSI6NC40LCJ0aXRsZSI6IkhhcHB5IFRlYXJzIiwicmVsZWFzZV9kYXRlIjoiMjAwOS0xMC0xNiIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkhhcHB5IFRlYXJzIiwiZ2VucmVfaWRzIjpbMzUsMThdLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJhZHVsdCI6ZmFsc2UsIm92ZXJ2aWV3IjoiVHdvIHNpc3RlcnMgcmV0dXJuIGhvbWUgdG8gY2FyZSBmb3IgdGhlaXIgYWdpbmcgZmF0aGVyLiIsInBvc3Rlcl9wYXRoIjoiXC9hZUxFd1BnMmJnVUlnVUdTdzR6WHRVMzNYZE4uanBnIn0seyJwb3B1bGFyaXR5Ijo0LjY0Nywidm90ZV9jb3VudCI6MTAsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL3JxSzZLTnJ4ejFVZmtTVTFTc2dGZnBleGJGRS5qcGciLCJpZCI6MTg2ODIsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvOVBZRmo1U1ZJSGxxRktZS3ozTGNUdXVyUndCLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkdpcmwgSGFwcHkiLCJnZW5yZV9pZHMiOlszNSwxMDQwMiwxMDc0OV0sInRpdGxlIjoiR2lybCBIYXBweSIsInZvdGVfYXZlcmFnZSI6Ni42LCJvdmVydmlldyI6IkEgQ2hpY2FnbyBtb2JzdGVyIGhpcmVzIGEgcm9jayBhbmQgcm9sbCBzaW5nZXIgYW5kIGhpcyBiYW5kIHRvIGtlZXAgYW4gZXllIG9uIGhpcyBkYXVnaHRlciBkdXJpbmcgU3ByaW5nIEJyZWFrIGluIEZvcnQgTGF1ZGVyZGFsZSwgRmxvcmlkYS4iLCJyZWxlYXNlX2RhdGUiOiIxOTY1LTA0LTE0In0seyJwb3B1bGFyaXR5Ijo2LjQwNywidm90ZV9jb3VudCI6NiwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvOUdpcTVJMzlFRjJWNG1UN0ZZZ1J0MXdFWm5RLmpwZyIsImlkIjo2NTM3MDcsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvYUM3UGRpR0s2eFFoVXRaOE1jTzJzdzhYa3AzLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkhhcHB5IEhhcHB5IEpveSBKb3k6IFRoZSBSZW4gJiBTdGltcHkgU3RvcnnigIsiLCJnZW5yZV9pZHMiOls5OV0sInRpdGxlIjoiSGFwcHkgSGFwcHkgSm95IEpveTogVGhlIFJlbiAmIFN0aW1weSBTdG9yeeKAiyIsInZvdGVfYXZlcmFnZSI6NS41LCJvdmVydmlldyI6IkV4cGxvcmluZyB0aGUgcmlzZSBhbmQgZmFsbCBvZiB0aGUgZ3JvdW5kYnJlYWtpbmcgYW5pbWF0ZWQgc2VyaWVzIOKAi1JlbiAmIFN0aW1weeKAiyBhbmQgaXRzIGNvbnRyb3ZlcnNpYWwgY3JlYXRvciwgSm9obiBLcmljZmFsdXNpLCB0aHJvdWdoIGFyY2hpdmFsIGZvb3RhZ2UsIHNob3cgYXJ0d29yayBhbmQgaW50ZXJ2aWV3cyB3aXRoIHRoZSBhcnRpc3RzLCBhY3RvcnMgYW5kIGV4ZWN1dGl2ZXMgYmVoaW5kIHRoZSBzaG93LiIsInJlbGVhc2VfZGF0ZSI6IjIwMjAtMDEtMjMifSx7InBvcHVsYXJpdHkiOjUuNDA0LCJpZCI6MjU3NzkzLCJ2aWRlbyI6ZmFsc2UsInZvdGVfY291bnQiOjI4LCJ2b3RlX2F2ZXJhZ2UiOjUuMiwidGl0bGUiOiJIYXBweSBGYWNlIEtpbGxlciIsInJlbGVhc2VfZGF0ZSI6IjIwMTQtMDMtMDEiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJIYXBweSBGYWNlIEtpbGxlciIsImdlbnJlX2lkcyI6WzEwNzcwLDgwLDE4LDUzXSwiYmFja2Ryb3BfcGF0aCI6IlwvN1lVWWJFNGxwdXdhU0hlQ0l2VlQxWDZxUG9KLmpwZyIsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJTZXJpYWwga2lsbGVyIEtlaXRoIEplc3BlcnNvbiBtdXJkZXJzIGF0IGxlYXN0IGVpZ2h0IHdvbWVuIG92ZXIgYSBmaXZlLXllYXIgc3BhbiBhbmQgdGF1bnRzIGF1dGhvcml0aWVzIHdpdGggZGlzdHVyYmluZyBsZXR0ZXJzIGFuZCBzY3JpYmJsZWQgY29uZmVzc2lvbnMgc2lnbmVkIHdpdGggYSBoYXBweSBmYWNlLiIsInBvc3Rlcl9wYXRoIjoiXC9rWDAwZG9aNHd2bGI5b1RnME9NWlhWYnVaYXcuanBnIn0seyJwb3B1bGFyaXR5IjoxMS4yODksInZvdGVfY291bnQiOjcxLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC85b3NIUkdIR0dvSDZuNUxLUE10aFB2SnJCMVouanBnIiwiaWQiOjE1MTM1LCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL3IyTjN1WThDNGFEZWdnWTl3dlJTZFYxVUtJbC5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJGZWFzdCBJSUk6IFRoZSBIYXBweSBGaW5pc2giLCJnZW5yZV9pZHMiOlsyOCwzNSwyNyw1M10sInRpdGxlIjoiRmVhc3QgSUlJOiBUaGUgSGFwcHkgRmluaXNoIiwidm90ZV9hdmVyYWdlIjo1LCJvdmVydmlldyI6IlRoZSBzdXJ2aXZvcnMgYXJlIHNhdmVkIGJ5IHRoZSBteXN0ZXJpb3VzIHByb3BoZXQgU2hvdCBCdXMgR3VzLCB3aG8gc2VlbWluZ2x5IGhhcyB0aGUgYWJpbGl0eSB0byBjb250cm9sIHRoZSBiZWFzdHMuIEhlIGxlYWRzIHRoZW0gaW50byB0aGUgc2V3ZXJzIGFzIHRoZXkgdHJhdmVsIHRvIHRoZSBiaWcgY2l0eS4gQWxvbmcgdGhlIHdheSB0aGV5IGdldCBoZWxwIGZyb20ga2FyYXRlIGV4cGVydCBKZWFuLUNsYXVkZSBTZWFnYWwgYW5kIGxlYXJuIHRoYXQgdGhlIGJlYXN0cyBvcmlnaW5hdGUgZnJvbSBhIHBsYWNlIGNhbGxlZCBUaGUgSGl2ZS4gQXJtZWQgd2l0aCB0aGlzIGtub3dsZWRnZSwgdGhleSBkZWNpZGUgdG8gZmlnaHQgYmFjayBhbmQgZGVzdHJveSB0aGUgYmVhc3RzLiIsInJlbGVhc2VfZGF0ZSI6IjIwMDktMDItMTcifSx7InBvcHVsYXJpdHkiOjQuNDE3LCJ2b3RlX2NvdW50IjoyOCwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwveFVCOGJybXYzNllrN3JTaVZkR3VZSUdTZ2hmLmpwZyIsImlkIjoyNDI3MywiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC83MVNyRWRwSGFranpwVG1QVHF6RW5UbUdDUHguanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiSGFwcHkgQ2FtcGVycyIsImdlbnJlX2lkcyI6WzM1XSwidGl0bGUiOiJIYXBweSBDYW1wZXJzIiwidm90ZV9hdmVyYWdlIjo1LjMsIm92ZXJ2aWV3IjoiQ2hhb3MgYW5kIHJhbXBhbnQgaG9ybW9uZXMgcmVpZ24gd2hlbiB0ZWVuYWdlIGNvdW5zZWxvcnMgYXJlIGxlZnQgaW4gY2hhcmdlIGR1cmluZyB0aGVpciBzdW1tZXItY2FtcCBkaXJlY3RvcidzIGFic2VuY2UuIiwicmVsZWFzZV9kYXRlIjoiMjAwMS0wMS0yMSJ9LHsicG9wdWxhcml0eSI6NC4yMjQsInZvdGVfY291bnQiOjMwLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC94eUJBSktMQUJacmNlcDNJZHBRb3ZnS2E2alUuanBnIiwiaWQiOjI1MDc0NSwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJIYXBweSBWYWxsZXkiLCJnZW5yZV9pZHMiOls5OV0sInRpdGxlIjoiSGFwcHkgVmFsbGV5Iiwidm90ZV9hdmVyYWdlIjo2LjksIm92ZXJ2aWV3IjoiVGhlIGNoaWxkcmVuIG9mIFwiSGFwcHkgVmFsbGV5XCIgd2VyZSB2aWN0aW1pemVkIGZvciB5ZWFycywgYnkgYSBrZXkgbWVtYmVyIG9mIHRoZSBsZWdlbmRhcnkgUGVubiBTdGF0ZSBjb2xsZWdlIGZvb3RiYWxsIHByb2dyYW0uIEJ1dCB3ZXJlIEplcnJ5IFNhbmR1c2t54oCZcyBjcmltZXMgYW4gb3BlbiBzZWNyZXQ/IFdpdGggcmFyZSBhY2Nlc3MsIGRpcmVjdG9yIEFtaXIgQmFyLUxldiBkZWx2ZXMgYmVuZWF0aCB0aGUgaGVhZGxpbmVzIHRvIHRlbGwgYSBtb2Rlcm4gQW1lcmljYW4gcGFyYWJsZSBvZiBndWlsdCwgcmVkZW1wdGlvbiwgYW5kIGlkZW50aXR5LiIsInJlbGVhc2VfZGF0ZSI6IjIwMTQtMTEtMTQifSx7InBvcHVsYXJpdHkiOjUuNjM1LCJpZCI6NTg0OTQsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MjQsInZvdGVfYXZlcmFnZSI6Ni44LCJ0aXRsZSI6IkRhbmllbCBUb3NoOiBIYXBweSBUaG91Z2h0cyIsInJlbGVhc2VfZGF0ZSI6IjIwMTEtMDMtMDgiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJEYW5pZWwgVG9zaDogSGFwcHkgVGhvdWdodHMiLCJnZW5yZV9pZHMiOlszNV0sImJhY2tkcm9wX3BhdGgiOm51bGwsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJEYW5pZWwgVG9zaCBwZXJmb3JtcyBpbiBmcm9udCBvZiBhIGxpdmUgU2FuIEZyYW5jaXNjbyBhdWRpZW5jZSBpbiB0aGlzIHN0YW5kLXVwIHNwZWNpYWwgZm9yIENvbWVkeSBDZW50cmFsLCBhbmQgdG91Y2hlcyBvbiB0b3BpY3MgcmFuZ2luZyBmcm9tIHNwb3J0cyBhbmQgcG9wIGN1bHR1cmUsIHRvIHJlbGlnaW9uIGFuZCBwb2xpdGljcy4iLCJwb3N0ZXJfcGF0aCI6IlwvYXpSa3BTS1FvWHdWVWlIMklJZTFablI2NmtVLmpwZyJ9LHsicG9wdWxhcml0eSI6NC41MSwiaWQiOjE4OTc1NSwidmlkZW8iOmZhbHNlLCJ2b3RlX2NvdW50Ijo5LCJ2b3RlX2F2ZXJhZ2UiOjQuOSwidGl0bGUiOiJUaGUgSGFwcHkgSG91c2UiLCJyZWxlYXNlX2RhdGUiOiIyMDEzLTA1LTA1Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiVGhlIEhhcHB5IEhvdXNlIiwiZ2VucmVfaWRzIjpbMjcsMzVdLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJhZHVsdCI6ZmFsc2UsIm92ZXJ2aWV3IjoiVGhlaXIgcmVsYXRpb25zaGlwIG9uIHRoZSByb2NrcywgYSB5b3VuZyBCcm9va2x5biBjb3VwbGUgaGVhZHMgdG8gYSByZW1vdGUgQiZhbXA7QiB0byB3b3JrIHRoaW5ncyBvdXQuIEJ1dCBmcm9tIHRoZSBtb21lbnQgdGhleSBhcnJpdmUgYXQgVGhlIEhhcHB5IEhvdXNlIGl0J3Mgb25lIGRpc2FzdGVyIGFmdGVyIGFub3RoZXIsIGFuZCB0aGV5IHNvb24gYmVnaW4gdG8gc3VzcGVjdCB0aGV5J3ZlIHdhbmRlcmVkIGludG8gYSByZWFsIGxpZmUgaG9ycm9yIG1vdmllLiBFdmVudHMgZXNjYWxhdGUgZnJvbSB3ZWlyZCB0byB0ZXJyaWZ5aW5nIGFzIHRoZXkgY29udGVuZCB3aXRoIHRoZSBob3VzZSdzIGJhdHR5IG93bmVyLCBoZXIgaW1wb3Npbmcgc29uLCBhIG1vb2R5IFN3ZWRpc2ggbGVwaWRvcHRlcmlzdCwgYSBwZWRhbnRpYyBFbmdsaXNoIHByb2Zlc3NvciwgYW4gZXh0cmFvcmRpbmFyaWx5IHJhcmUgYnV0dGVyZmx5LCB0aGUgd29ybGQncyBiZXN0IGJsdWViZXJyeSBtdWZmaW5zLCBhIC40NCBNYWdudW0sIGEgZGVtZW50ZWQgc2VyaWFsIGtpbGxlciwgYW5kIG9uZSB2ZXJ5IHN0cmljdCBydWxlYm9vay4iLCJwb3N0ZXJfcGF0aCI6bnVsbH1dfQ==
+  recorded_at: Fri, 09 Oct 2020 02:50:38 GMT
+recorded_with: VCR 6.0.0

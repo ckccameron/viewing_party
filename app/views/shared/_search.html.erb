@@ -1,0 +1,7 @@
+<%= button_to "Discover Top 40 Movies", '/movies', method: :get %>
+
+<%= form_with model: nil, url: '/movies', method: :get do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query, nil, placeholder: 'Movie Title') %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=SECRET_TMDB_API_KEY&page=1&query=Inception
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 10 Oct 2020 00:47:18 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=120
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 94714c239ea352985d3c1efcf41484f2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LAX3-C3
+      X-Amz-Cf-Id:
+      - PLM_IfbjwRbvldx_ewt7oUmFSGEf4O9JJz8IzfolQ9uVpIXp7sbL9A==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoxLCJ0b3RhbF9yZXN1bHRzIjo2LCJ0b3RhbF9wYWdlcyI6MSwicmVzdWx0cyI6W3sicG9wdWxhcml0eSI6NTAuODM1LCJ2b3RlX2NvdW50IjoyNzMxMywidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvOWdrN2FkSFllRHZIa0NTRXFBdlFOTFY1VWdlLmpwZyIsImlkIjoyNzIwNSwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC9zM1RCclJHQjFpYXY3Z0ZPQ054M0gzMU1vRVMuanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiSW5jZXB0aW9uIiwiZ2VucmVfaWRzIjpbMjgsMTIsODc4XSwidGl0bGUiOiJJbmNlcHRpb24iLCJ2b3RlX2F2ZXJhZ2UiOjguMywib3ZlcnZpZXciOiJDb2JiLCBhIHNraWxsZWQgdGhpZWYgd2hvIGNvbW1pdHMgY29ycG9yYXRlIGVzcGlvbmFnZSBieSBpbmZpbHRyYXRpbmcgdGhlIHN1YmNvbnNjaW91cyBvZiBoaXMgdGFyZ2V0cyBpcyBvZmZlcmVkIGEgY2hhbmNlIHRvIHJlZ2FpbiBoaXMgb2xkIGxpZmUgYXMgcGF5bWVudCBmb3IgYSB0YXNrIGNvbnNpZGVyZWQgdG8gYmUgaW1wb3NzaWJsZTogXCJpbmNlcHRpb25cIiwgdGhlIGltcGxhbnRhdGlvbiBvZiBhbm90aGVyIHBlcnNvbidzIGlkZWEgaW50byBhIHRhcmdldCdzIHN1YmNvbnNjaW91cy4iLCJyZWxlYXNlX2RhdGUiOiIyMDEwLTA3LTE1In0seyJwb3B1bGFyaXR5Ijo4LjQ3Miwidm90ZV9jb3VudCI6MjUzLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC9zTnhxd3R5SE1OUXdLV29GWURxY1lUdWk1T2suanBnIiwiaWQiOjY0OTU2LCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL3NBQk1wSFJDbXQ3cWc5cTZBRmJaMWpQVTFKZi5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJJbmNlcHRpb246IFRoZSBDb2JvbCBKb2IiLCJnZW5yZV9pZHMiOlsyOCwxNiw4NzgsNTNdLCJ0aXRsZSI6IkluY2VwdGlvbjogVGhlIENvYm9sIEpvYiIsInZvdGVfYXZlcmFnZSI6Ny4zLCJvdmVydmlldyI6IlRoZSBDb2JvbCBKb2IgaXMgYSBmb3VydGVlbi1taW51dGUgYW5pbWF0ZWQgcHJlcXVlbCB0byBDaHJpc3RvcGhlciBOb2xhbuKAmXMgYXdhcmQtd2lubmluZyBtb3ZpZTogSW5jZXB0aW9uLCBkZXRhaWxpbmcgdGhlIGhlaXN0IG9uIE1yLiBLYW5lZGEncyBtaW5kIGJ5IE5hc2gsIENvYmIsIEFydGh1ciwgYW5kIHNldmVyYWwgQ29ib2wgRW5naW5lZXJpbmcgdGh1Z3MuIiwicmVsZWFzZV9kYXRlIjoiMjAxMC0xMi0wNyJ9LHsicG9wdWxhcml0eSI6MS43OTMsImlkIjoyNTA4NDUsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MSwidm90ZV9hdmVyYWdlIjo0LjUsInRpdGxlIjoiV1dBIFRoZSBJbmNlcHRpb24iLCJyZWxlYXNlX2RhdGUiOiIyMDAxLTEwLTI2Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiV1dBIFRoZSBJbmNlcHRpb24iLCJnZW5yZV9pZHMiOltdLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJhZHVsdCI6ZmFsc2UsIm92ZXJ2aWV3IjoiVGhlIGZpcnN0IFdvcmxkIFdyZXN0bGluZyBBbGxzdGFycyBwYXkgcGVyIHZpZXcsIGxpdmUgZnJvbSBTeWRuZXksIEF1c3RyYWxpYSEgQSB0b3VybmFtZW50IHRpdGxlZCBcIjcgRGVhZGx5IFNpbnNcIiwgZWFjaCByb3VuZCBoYXZpbmcgYSBzdGlwdWxhdGlvbiBtYXRjaCwgdGhlIHdpbm5lciB3aWxsIGJlIGNyb3duZWQgdGhlIGZpcnN0IGV2ZXIgV1dBIEhlYXZ5d2VpZ2h0IENoYW1waW9uISBXcmVzdGxlcnMgc3VjaCBhcyBKZWZmIEphcnJldHQsIFJvYWQgRG9nZywgSmVycnkgTGF3bGVyIGFsbCBjb21wZXRlIGluIHRoZSB0b3VybmFtZW50LCB3aXRoIHRoZSBXV0EgQ29tbWlzc2lvbmVyLCBCcmV0IEhhcnQgbm90IHRvbyBmYXIgYXdheSB0byBtYWtlIHN1cmUgbm90aGluZyBnZXRzIHRvIGZhciBvdXQgb2YgaGFuZCEiLCJwb3N0ZXJfcGF0aCI6bnVsbH0seyJwb3B1bGFyaXR5IjowLjkyMiwidm90ZV9jb3VudCI6MywidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvdmZkUlJqQ3VxUDVPREp3YzBtZ2cwM0U2RXlOLmpwZyIsImlkIjo3NDAxOTcsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6bnVsbCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiSW5jZXB0aW9uOiBNb3Rpb24gQ29taWNzIiwiZ2VucmVfaWRzIjpbMTZdLCJ0aXRsZSI6IkluY2VwdGlvbjogTW90aW9uIENvbWljcyIsInZvdGVfYXZlcmFnZSI6NCwib3ZlcnZpZXciOiJUaGUgcHJlcXVlbCB0byBcIkluY2VwdGlvblwiIGZvbGxvd3MgQ29iYiBhbmQgQXJ0aHVyIGFzIHRoZXkgYXJlIGFzc2lnbmVkIGFuZCBtdXN0IHdvcmsgdGhyb3VnaCBhbiBpbXBvcnRhbnQgZXh0cmFjdGlvbiwgVGhlIENvYm9sIEpvYi4iLCJyZWxlYXNlX2RhdGUiOiIifSx7InBvcHVsYXJpdHkiOjAuNiwiaWQiOjU0MjQzOCwidmlkZW8iOmZhbHNlLCJ2b3RlX2NvdW50IjoxLCJ2b3RlX2F2ZXJhZ2UiOjcsInRpdGxlIjoiQmlraW5pIEluY2VwdGlvbiIsInJlbGVhc2VfZGF0ZSI6IjIwMTUtMDUtMTkiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJCaWtpbmkgSW5jZXB0aW9uIiwiZ2VucmVfaWRzIjpbMzVdLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJhZHVsdCI6ZmFsc2UsIm92ZXJ2aWV3IjoiVHdvIGZsdW5reSBKYW5pdG9ycyBpbiBhbiBBcmN0aWMgTGFiIHBlcmZvcm0gdW5hdXRob3JpemVkIGV4cGVyaW1lbnRzIHRyYW5zcG9ydGluZyB0aGVtIHRvIGEgYmVhY2ggZHJlYW0gd29ybGQgaW4gTWFsaWJ1IENhbGlmb3JuaWEgd1wvNTAgYmVhdXRpZnVsIHlvdW5nIGdpcmxzIGFuZCBhIGZlbWFsZSBCcmF6aWxpYW4gUGhEIFN0dWRlbnQgd2VhcmluZyBvbmx5IGEgYnJhIGFuZCBwYW50aWVzLiBBICc2NyBNdXNjbGUgY2FyIHJhY2VzIGNoYXNlcyBob3JzZXMgZ3VucyBmaWdodHMgc3VyZmluZywgc3VtbyB3cmVzdGxlciwgd29sZiBtb25zdGVyLCB1bmRlcndhdGVyIHNjZW5lcyB0b25zIG9mIGdvcmdlb3VzIG1vZGVscy4gU2V4eSBzY2ktZmkgZnVuLiIsInBvc3Rlcl9wYXRoIjoiXC9tTkFTbEVPRlgyYzl1cHhhU2JnZUtGdklyMUwuanBnIn0seyJwb3B1bGFyaXR5IjoxLjUyLCJnZW5yZV9pZHMiOltdLCJ2aWRlbyI6dHJ1ZSwidm90ZV9jb3VudCI6Miwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsImFkdWx0IjpmYWxzZSwidGl0bGUiOiJUaGUgSW5jZXB0aW9uIG9mIERyYW1hdGljIFJlcHJlc2VudGF0aW9uIiwib3JpZ2luYWxfdGl0bGUiOiJOxIF0ecSBcmFtYmhhbSIsImJhY2tkcm9wX3BhdGgiOm51bGwsImlkIjozNTA2MzIsInZvdGVfYXZlcmFnZSI6Ni4zLCJvdmVydmlldyI6Ik9uIGNlcnRhaW4gQWRhdnVzOiB0aGUgYmFzaWMgc3RlcHMgaW4gQmhhcmF0YW5hdHlhbS4gVGhlIGZpcnN0IHBhcnQgY292ZXJzIFRhdHRhIEFkYXZ1LCBOYXR0YSBBZGF2dSwgVmlzaGFydSBBZGF2dSAsIFRhdHRpIE1ldHRpIEFkYXZ1IGFuZCBUZWVybWFuYW0gQWRhdnUuIiwicG9zdGVyX3BhdGgiOm51bGx9XX0=
+  recorded_at: Sat, 10 Oct 2020 00:47:18 GMT
+recorded_with: VCR 6.0.0
