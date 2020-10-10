@@ -27,6 +27,9 @@ describe 'As an authenticated user' do
           fill_in :query, with: "Inception"
           click_button "Search"
           expect(current_path).to eq('/movies')
+          page.all('.movie-row').each do |movie|
+            expect(movie).to have_content('Inception')
+          end
         end
       end
     end
