@@ -1,4 +1,4 @@
-<%= button_to "Discover Top 40 Movies", '/movies?q=top%40rated', method: :get %>
+<%= button_to "Discover Top 40 Movies", '/movies', method: :get %>
 
 <%= form_with model: nil, url: '/movies', method: :get do %>
   <%= label_tag(:query, "Search for:") %>
