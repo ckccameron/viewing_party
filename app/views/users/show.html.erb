@@ -5,8 +5,22 @@
 <%= button_to "Discover Movies", discover_path, method: :get %>
 
 <section class="friends">
-
+  <h3>Friends</h3>
+  <%= form_tag "/friendships", method: :post do %>
+    <%= label_tag :friend_email, "Enter your friend's email" %>
+    <%= text_field_tag :friend_email, nil, placeholder: "Enter your friend's email" %>
+    <%= submit_tag "Add Friend" %>
+  <% end %>
+  <% if @friends.empty? == false %>
+    <% @friends.each do |friend| %>
+      <p>Name: <%= friend.name %></p>
+      <p>Email: <%= friend.email %></p>
+    <% end %>
+  <% else %>
+    <p>You currently have no friends</p>
+  <% end %>
 </section>
+
 <section class="parties">
 
 </section>
