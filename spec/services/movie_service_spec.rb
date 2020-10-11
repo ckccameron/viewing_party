@@ -37,4 +37,62 @@ describe MovieService do
       expect(movies.first[:vote_average]).to be_between(0, 10).inclusive
     end
   end
+
+  it "return movie details" do
+    VCR.use_cassette("fight_club_details_results") do
+      movie_id = 550
+      movie = @service.details(movie_id)
+
+      expect(movie).to have_key(:runtime)
+      expect(movie[:runtime]).to be_a(Integer)
+      expect(movie[:runtime]).to eq(139)
+      expect(movie[:runtime]).to be > 0
+
+      expect(movie).to have_key(:overview)
+      expect(movie[:overview]).to be_a(String)
+      expect(movie[:overview].length).to be > 0
+
+      expect(movie).to have_key(:genres)
+      expect(movie[:genres]).to be_a(Array)
+      expect(movie[:genres].first).to be_a(Hash)
+      expect(movie[:genres].first).to have_key(:name)
+      expect(movie[:genres].first[:name]).to be_a(String)
+      expect(movie[:genres].first[:name].length).to be > 0
+    end
+  end
+
+  it "returns cast members" do
+    VCR.use_cassette("fight_club_cast_results") do
+      movie_id = 550
+      movie = @service.cast(movie_id)
+
+      expect(movie).to have_key(:cast)
+      expect(movie[:cast]).to be_a(Array)
+      expect(movie[:cast].size).to be > 0
+      expect(movie[:cast].first).to be_a(Hash)
+      expect(movie[:cast].first).to have_key(:name)
+      expect(movie[:cast].first[:name]).to be_a(String)
+      expect(movie[:cast].first[:name].length).to be > 0
+      expect(movie[:cast].first).to have_key(:character)
+      expect(movie[:cast].first[:character]).to be_a(String)
+      expect(movie[:cast].first[:character].length).to be > 0
+    end
+  end
+
+  it "returns reviews" do
+    VCR.use_cassette("fight_club_review_results") do
+
+      movie_id = 550
+      movie = @service.reviews(movie_id)
+
+      expect(movie).to be_a(Array)
+      expect(movie.first).to be_a(Hash)
+      expect(movie.first).to have_key(:author)
+      expect(movie.first[:author]).to be_a(String)
+      expect(movie.first[:author].length).to be > 0
+      expect(movie.first).to have_key(:content)
+      expect(movie.first[:content]).to be_a(String)
+      expect(movie.first[:content].length).to be > 0
+    end
+  end
 end
