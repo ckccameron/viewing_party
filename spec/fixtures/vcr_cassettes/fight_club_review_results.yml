@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/550/reviews?api_key=SECRET_TMDB_API_KEY&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 00:18:54 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - f8545b46fe54be0c98d58e97211a05c9
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      Last-Modified:
+      - '2020-10-09 16:52:12 +0000'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 42150317fa0e740e8a110fee35cc5456.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Amz-Cf-Id:
+      - 8p98YeWPtQTyf1_4yXIFNdeJGi9_cXUHBJrGaBnoYZ9HhCfhjtKCpw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":550,"page":1,"results":[{"author":"Goddard","content":"Pretty
+        awesome movie.  It shows what one crazy person can convince other crazy people
+        to do.  Everyone needs something to believe in.  I recommend Jesus Christ,
+        but they want Tyler Durden.","id":"5b1c13b9c3a36848f2026384","url":"https://www.themoviedb.org/review/5b1c13b9c3a36848f2026384"},{"author":"Brett
+        Pascoe","content":"In my top 5 of all time favourite movies. Great story line
+        and a movie you can watch over and over again.","id":"5b3e1ba1925141144c007f17","url":"https://www.themoviedb.org/review/5b3e1ba1925141144c007f17"}],"total_pages":1,"total_results":2}'
+  recorded_at: Sun, 11 Oct 2020 00:18:54 GMT
+recorded_with: VCR 6.0.0
