@@ -19,7 +19,7 @@ class Movie
   end
 
   def format_genres(genres)
-    genres.map { |genre| genre[:name]  }.join(", ")
+    genres.map { |genre| genre[:name] }.join(', ')
   end
 
   def format_cast(cast)
