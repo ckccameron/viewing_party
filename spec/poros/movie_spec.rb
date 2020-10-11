@@ -88,4 +88,8 @@ describe Movie do
     expect(@movie.generate_reviews(reviews)).to be_a(Array)
     expect(@movie.generate_reviews(reviews).all? Review).to be_truthy
   end
+
+  it "has a runtime formatting method" do
+    expect(@movie.formatted_runtime).to eq('1 hr 40 min')
+  end
 end
