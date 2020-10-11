@@ -10,6 +10,6 @@ class MoviesController < ApplicationController
   end
 
   def show
-
+    @movie = SearchResults.movie_details(params[:id])
   end
 end
