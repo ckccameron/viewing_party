@@ -1,1 +1,21 @@
+<%= render partial: 'shared/search' %>
+
+<h1 class='movie-title'><%= @movie.title %></h1>
+<section>
+  <p class='movie-vote-average'>Vote Average: <%= @movie.vote_average %></p>
+  <p class='movie-runtime'>Runtime: <%= @movie.formatted_runtime %> </p>
+  <p class='movie-genres'>Genres: <%= @movie.genres %> </p>
+</section>
+<h2>Overview</h2>
+<p class='movie-overview'>Overview: <%= @movie.overview %> </p>
+<h2>Cast</h2>
+<% @movie.cast.each do |actor| %>
+  <p class='movie-cast'> <%= actor %> </p>
+<% end %>
+<h2 class='movie-review-count'> <%= @movie.reviews.size %>Reviews</h2>
+<% @movie.reviews.each do |review| %>
+  <p class='movie-review'> <%= review.author %> </p>
+  <p class='movie-review'> <%= review.content %> </p>
+<% end %>
+
 <%= button_to "Create Viewing Party", '/parties/new', method: :get %>
