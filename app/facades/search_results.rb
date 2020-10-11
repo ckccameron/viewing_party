@@ -9,6 +9,14 @@ class SearchResults
     json.map { |data| movie(data) } unless json.compact.empty?
   end
 
+  def self.movie_details(id)
+    data = service.details(id)
+    data[:cast] = service.cast(id)[:cast]
+    data[:reviews] = service.reviews(id)
+
+    movie(data)
+  end
+
   def self.service
     MovieService.new
   end

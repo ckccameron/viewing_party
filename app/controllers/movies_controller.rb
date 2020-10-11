@@ -8,4 +8,8 @@ class MoviesController < ApplicationController
                 SearchResults.top_rated_movies
               end
   end
+
+  def show
+    @movie = SearchResults.movie_details(params[:id])
+  end
 end

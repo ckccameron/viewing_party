@@ -8,6 +8,18 @@ class MovieService
     aggregator('search/movie', params)
   end
 
+  def details(movie_id)
+    to_json("movie/#{movie_id}")
+  end
+
+  def cast(movie_id)
+    to_json("movie/#{movie_id}/credits")
+  end
+
+  def reviews(movie_id)
+    aggregator("movie/#{movie_id}/reviews")
+  end
+
   def aggregator(url, params = {})
     movies = []
     page = 0
@@ -21,7 +33,7 @@ class MovieService
     movies
   end
 
-  def to_json(url, params)
+  def to_json(url, params = {})
     response = conn.get(url) do |req|
       req.params = params
       req.params['api_key'] = ENV['TMDB_API_KEY']

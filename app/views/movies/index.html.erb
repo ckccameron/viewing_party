@@ -7,7 +7,7 @@
       <th>Vote Average</th>
     </tr>
     <% @movies.each do |movie| %>
-    <tr class='movie-row'>
+    <tr class='movie-row' id=<%="movie-#{movie.id}"%>>
       <td><%= link_to movie.title, "movies/#{movie.id}" %></td>
       <td><%= movie.vote_average %></td>
     </tr>
