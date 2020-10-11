@@ -29,4 +29,8 @@ class Movie
   def generate_reviews(reviews)
     reviews.map { |review_data| Review.new(review_data) }
   end
+
+  def formatted_runtime
+    "#{@runtime / 60} hr #{@runtime % 60} min"
+  end
 end
