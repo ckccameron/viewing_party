@@ -5,4 +5,8 @@ class PartiesController < ApplicationController
     id = params[:movie_id]
     @movie = SearchResults.party_details(id)
   end
+
+  def create
+    redirect_to dashboard_path
+  end
 end
