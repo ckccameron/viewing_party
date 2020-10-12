@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   get '/movies', to: 'movies#index'
   get '/movies/:id', to: 'movies#show'
 
+  post "/friendships", to: "friendships#create"
+
   get '/parties/new', to: 'parties#new'
 end

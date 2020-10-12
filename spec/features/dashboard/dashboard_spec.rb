@@ -36,4 +36,46 @@ describe 'User Dashboard Page' do
     expect(page).to have_css('.friends')
     expect(page).to have_css('.parties')
   end
+
+  describe "creating friendships between users" do
+    before :each do
+      @user1 = create(:user)
+
+      visit login_path
+      fill_in :email, with: @user1.email
+      fill_in :password, with: @user1.password
+      click_button "Log in"
+    end
+
+    it "allows user to add a friend by entering the email of another registered user" do
+      user2 = create(:user)
+
+      within ".friends" do
+        expect(page).to have_content("You currently have no friends")
+        fill_in :friend_email, with: user2.email
+        click_button "Add Friend"
+      end
+
+      expect(current_path).to eq(dashboard_path)
+      expect(page).to have_content("#{user2.name} has been added")
+
+      within ".friends" do
+        expect(page).to have_content(user2.email)
+      end
+    end
+
+    it "does not allow user to add a friend if the email is not registered to a user" do
+      email = "no_one@who.com"
+
+      within ".friends" do
+        expect(page).to have_content("You currently have no friends")
+        fill_in :friend_email, with: email
+        click_button "Add Friend"
+      end
+
+      expect(current_path).to eq(dashboard_path)
+      expect(page).to have_content("You currently have no friends")
+      expect(page).to have_content("Couldn't find user with this email: #{email}")
+    end
+  end
 end
