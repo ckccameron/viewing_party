@@ -1,5 +1,8 @@
 class PartiesController < ApplicationController
   before_action :require_login
 
-  def new; end
+  def new
+    id = params[:movie_id]
+    @movie = SearchResults.party_details(id)
+  end
 end
