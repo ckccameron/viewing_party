@@ -18,4 +18,4 @@
   <p class='movie-review'> <%= review.content %> </p>
 <% end %>
 
-<%= button_to "Create Viewing Party", '/parties/new', method: :get %>
+<%= button_to "Create Viewing Party", "/parties/new", method: :get, params: {movie_id: @movie.id} %>
