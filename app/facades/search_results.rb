@@ -17,6 +17,12 @@ class SearchResults
     movie(data)
   end
 
+  def self.party_details(id)
+    data = service.details(id)
+
+    movie(data)
+  end
+
   def self.service
     MovieService.new
   end
