@@ -77,5 +77,16 @@ describe 'User Dashboard Page' do
       expect(page).to have_content("You currently have no friends")
       expect(page).to have_content("Couldn't find user with this email: #{email}")
     end
+
+    it "shows viewing parties on dashboard that include movie title, date, time and status of host or invited for the given user" do
+      guest1 = create(:user)
+      guest2 = create(:user)
+      party = create(:party)
+
+      party.guests << guest1
+      party.guests << guest2
+
+      
+    end
   end
 end
