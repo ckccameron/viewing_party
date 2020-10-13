@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'faraday'
 gem 'bcrypt'
+gem 'validates_timeliness', '~> 5.0.0.beta1'
 
 group :development, :test do
   gem 'pry'
