@@ -1,18 +1,18 @@
 <h1>Create Your New Viewing Party</h1>
 
 <%= form_tag "/parties", method: :post do %>
+  <%= text_field_tag :movie_id, @movie.id, hidden: true %>
   <%= label_tag :movie_title, "Movie Title:" %>
-  <%= text_field_tag :movie_title, @movie.title, disabled: true %><br>
+  <%= text_field_tag :movie_title, @movie.title, readonly: true %><br>
   <%= label_tag :duration, "Duration (in minutes):" %>
   <%= number_field_tag :duration, "#{@movie.runtime}" %><br>
-  <%= label_tag :date, "Select a date:" %>
-  <%= date_select("party", "date") %><br>
-  <%= label_tag :time, "Select a time:" %>
-  <%= time_select("party", "time", ampm: true) %><br>
+  <%= label_tag :datetime, "Select a date and time:" %>
+  <%= datetime_select("party", "date") %><br>
+
   <section class="party-friends">
     <%= label_tag :friends, "Choose your friends you want to invite:" %><br>
-    <%= collection_check_boxes("party", "guests", current_user.friends, :name, :email) do |b| %>
-      <%= b.label(:"data-value" => b.value) { b.check_box + " " + b.value + " - " + b.text } %><br>
+    <%= collection_check_boxes("party", "guests", current_user.friends, :email, :name) do |b| %>
+      <%= b.label(:"data-value" => b.value) { b.check_box + " " + b.text + " - " + b.value } %><br>
     <% end %>
   </section>
   <%= submit_tag "Create This Party" %>
