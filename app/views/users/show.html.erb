@@ -21,6 +21,20 @@
   <% end %>
 </section>
 
-<section class="parties">
 
+<section class="parties">
+  <h3>Viewing parties</h3>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Date and Time</th>
+      <th>Status</th>
+    </tr>
+  <% current_user.parties.each do |party|%>
+  <tr class='party-row' id=<%="party-#{party.id}"%>>
+    <td><%= link_to party.movie_title, "movies/#{party.movie_id}" %></td>
+    <td> <%= party.datetime %> </td>
+  </tr>
+  <% end %>
+</table>
 </section>
