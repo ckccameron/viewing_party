@@ -63,6 +63,8 @@ describe "As an authenticated user" do
           select "2020", from: "party_date_1i"
           select "October", from: "party_date_2i"
           select "12", from: "party_date_3i"
+          # select "10", from: "party_time_4i"
+          # select "15", from: "party_time_5i"
           check "#{friend1.name}"
           check "#{friend2.name}"
           click_button "Create This Party"
