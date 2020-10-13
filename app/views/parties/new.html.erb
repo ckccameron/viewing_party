@@ -4,7 +4,7 @@
   <%= label_tag :movie_title, "Movie Title:" %>
   <%= text_field_tag :movie_title, @movie.title, disabled: true %><br>
   <%= label_tag :duration, "Duration (in minutes):" %>
-  <%= text_field_tag :duration, "#{@movie.runtime}" %><br>
+  <%= number_field_tag :duration, "#{@movie.runtime}" %><br>
   <%= label_tag :date, "Select a date:" %>
   <%= date_select("party", "date") %><br>
   <%= label_tag :time, "Select a time:" %>
