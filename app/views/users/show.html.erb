@@ -1,8 +1,7 @@
 <%= button_to "Log out", "/logout", method: :get %>
+<%= button_to "Discover Movies", discover_path, method: :get %>
 
 <p>Welcome, <%= current_user.name %>!</p>
-
-<%= button_to "Discover Movies", discover_path, method: :get %>
 
 <section class="friends">
   <h3>Friends</h3>
@@ -23,7 +22,7 @@
 
 
 <section class="parties">
-  <h3>Viewing parties</h3>
+  <h3>Viewing Parties</h3>
   <% if !current_user.parties.empty? %>
     <table>
       <tr>
