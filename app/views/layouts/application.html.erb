@@ -9,20 +9,28 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light justify-content-between">
-      <a href="/">Viewing Party</a>
+    <nav class="navbar navbar-light bg-primary justify-content-between">
+      <a class='text-light' href="/">Viewing Party</a>
         <% if logged_in? %>
         <%= button_to "Log out", "/logout", method: :get, class: 'btn btn-outline-dark' %>
         <% else %>
         <div class="form-inline">
-          <%= link_to "Register", "/register", class: "mr-sm-2" %>
-          <%= button_to "Log in", "/login", method: :get, class: 'btn btn-outline-primary my-2 my-sm-0' unless controller_name == 'sessions'%>
+          <%= link_to "Register", "/register", class: "mr-sm-2 text-light" %>
+          <%= button_to "Log in", "/login", method: :get, class: 'btn btn-outline-light my-2 my-sm-0' unless controller_name == 'sessions'%>
         </div>
         <% end %>
     </nav>
 
     <% flash.each do |type, message| %>
-      <p><%= message %></p>
+      <% if type == 'success' %>
+        <div class="alert alert-warning" role="alert">
+          <%= message %>
+        </div>
+      <% else %>
+        <div class="alert alert-dark" role="alert">
+          <%= message %>
+        </div>
+      <% end %>
     <% end %>
 
 
