@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'Welcome page' do
   it "shows a welcome message" do
-    welcome = "Welcome to watch party!"
-    description = "Use this app to coordinate watch parties with your friends."
+    welcome = "Welcome to Viewing Party!"
+    description = "Viewing Party is the best way to coordinate movie viewing parties with your friends online. Viewing Party allows you to add friends and send them invites to create watch parties. You and your friends can enjoy your favorite movies together."
     visit root_path
 
     expect(page).to have_content(welcome)
