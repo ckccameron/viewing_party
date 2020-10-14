@@ -12,6 +12,7 @@
     <nav class="navbar navbar-light bg-primary justify-content-between">
       <a class='text-light' href="/">Viewing Party</a>
         <% if logged_in? %>
+        <%= button_to "My dashboard", "/dashboard", method: :get, class: 'btn btn-outline-light' %>
         <%= button_to "Log out", "/logout", method: :get, class: 'btn btn-outline-dark' %>
         <% else %>
         <div class="form-inline">
