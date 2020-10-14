@@ -35,8 +35,8 @@
 
 
     <main id="main">
-      <% if action_name == "new" %>
-      <div class="card" style='width: 50%; margin: auto;'>
+      <% if action_name == "new" && !(controller_name == 'parties') %>
+      <div class="card form-card" style='width: 50%; margin: auto;'>
         <div class="card-body">
           <div style='width: 50%; margin: auto;'>
           <%= yield %>
