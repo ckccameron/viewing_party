@@ -1,7 +1,8 @@
-<%= button_to "Discover Top 40 Movies", '/movies', method: :get %>
+
+<%= button_to "Discover Top 40 Movies", '/movies', method: :get, class: "btn btn-outline-warning my-2" %>
 
 <%= form_tag '/movies', method: :get do %>
   <%= label_tag(:query, "Search for:") %>
   <%= text_field_tag(:query, nil, placeholder: 'Movie Title') %>
-  <%= submit_tag("Search") %>
+  <%= submit_tag "Search", class: "btn btn-primary my-2" %>
 <% end %>
