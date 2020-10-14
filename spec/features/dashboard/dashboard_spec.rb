@@ -13,7 +13,10 @@ describe 'User Dashboard Page' do
   before(:each) do
     @user = create(:user)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    visit login_path
+    fill_in :email, with: @user.email
+    fill_in :password, with: @user.password
+    click_button "Log in"
   end
 
   it "should show welcome message" do
@@ -78,44 +81,40 @@ describe 'User Dashboard Page' do
       expect(page).to have_content("Couldn't find user with this email: #{email}")
     end
 
-    it "shows viewing parties on dashboard that include movie title, date, time and status of host or invited for the given user" do
-      VCR.use_cassette('fight_club_top_rated_results', allow_playback_repeats: true) do
-        VCR.use_cassette('fight_club_details_results', allow_playback_repeats: true) do
-          friend1 = create(:user)
-          friend2 = create(:user)
-          @user.friends << friend1
-          @user.friends << friend2
+    xit "shows viewing parties on dashboard that include movie title, date, time and status of host or invited for the given user" do
+      friend1 = create(:user)
+      friend2 = create(:user)
+      friend3 = create(:user)
+      friend4 = create(:user)
 
-          visit movies_path
+      party1 = create(:party)
+      party2 = create(:party)
+      party3 = create(:party)
+      binding.pry
 
-          within "#movie-550" do
-            click_link "Fight Club"
-          end
+      create(:guest, party_id: party1.id, user_id: @user.id, is_host: true)
+      create(:guest, party_id: party2.id, user_id: @user.id, is_host: false)
 
-          click_button "Create Viewing Party"
+      # user = User.find(@user.id)
+      # user.reload
 
-          select "2021", from: "party_date_1i"
-          select "January", from: "party_date_2i"
-          select "31", from: "party_date_3i"
-          select "10", from: "party_date_4i"
-          select "45", from: "party_date_5i"
-          check "#{friend1.name}"
-          check "#{friend2.name}"
+      visit dashboard_path
 
-          click_button "Create This Party"
-
-          expect(page).to have_content("Your party has been created!")
-
-          ## QUESTION: why is this expectation not passing?
-          # within ".parties" do
-          #   expect(page).to have_link("Fight Club")
-          # end
-
-        end
+      save_and_open_page
+      within ".parties" do
+        expect(page).to have_link(party1.movie_title)
+        expect(page).to have_link(party2.movie_title)
+        expect(page).to have_css(".hosting-party-row")
+        expect(page).to have_css(".guest-party-row")
       end
     end
 
-    xit 'create party sad path' do
+    it 'displays zero parties message to user if they have no parties that they are hosting or invited to' do
+      visit dashboard_path
+
+      within ".parties" do
+        expect(page).to have_content("You have zero parties")
+      end
     end
   end
 end
