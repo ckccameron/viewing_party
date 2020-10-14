@@ -1,18 +1,17 @@
-<%= button_to "Discover Movies", discover_path, method: :get, class: 'btn btn-outline-warning', id: 'center-button' %>
+<h1>Welcome, <%= current_user.name %>!</h1>
 
-<p>Welcome, <%= current_user.name %>!</p>
+<%= button_to "Discover Movies", discover_path, method: :get, class: 'btn btn-outline-warning', id: 'center-button' %>
 
 <section class="friends">
   <h3>Friends</h3>
   <%= form_tag "/friendships", method: :post do %>
     <%= label_tag :friend_email, "Enter your friend's email" %>
-    <%= text_field_tag :friend_email, nil, placeholder: "Enter your friend's email" %>
-    <%= submit_tag "Add Friend" %>
+    <%= text_field_tag :friend_email, nil, placeholder: "example@email.com" %>
+    <%= submit_tag "Add Friend", class: 'btn btn-outline-primary' %>
   <% end %>
   <% if @friends.empty? == false %>
     <% @friends.each do |friend| %>
-      <p>Name: <%= friend.name %></p>
-      <p>Email: <%= friend.email %></p>
+      <p>Name: <%= friend.name %> - Email: <%= friend.email %></p>
     <% end %>
   <% else %>
     <p>You currently have no friends</p>
