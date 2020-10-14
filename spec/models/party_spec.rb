@@ -28,5 +28,42 @@ describe Party do
       expected = { movie_id: 550, duration: 139, datetime: datetime, movie_title: "Fight Club" }
       expect(Party.format_params(params)).to eq(expected)
     end
+
+    describe '#query_method' do
+      before :each do
+        @host1 = create(:user)
+        @friend1 = create(:user)
+        @friend2 = create(:user)
+
+        @host2 = create(:user)
+        @friend3 = create(:user)
+        @friend4 = create(:user)
+
+        @party1= create(:party)
+        @party2= create(:party)
+        @party3= create(:party)
+        @party4= create(:party)
+
+        create(:guest, party_id: @party1.id, user_id: @host1.id, is_host: true)
+        create(:guest, party_id: @party2.id, user_id: @host1.id, is_host: true)
+        create(:guest, party_id: @party3.id, user_id: @host2.id, is_host: true)
+        create(:guest, party_id: @party4.id, user_id: @host2.id, is_host: true)
+        create(:guest, party_id: @party1.id, user_id: @friend1.id, is_host: false)
+        create(:guest, party_id: @party1.id, user_id: @friend2.id, is_host: false)
+        create(:guest, party_id: @party1.id, user_id: @host2.id, is_host: false)
+        create(:guest, party_id: @party2.id, user_id: @friend4.id, is_host: false)
+        create(:guest, party_id: @party3.id, user_id: @host1.id, is_host: false)
+      end
+
+      it "returns parties that a user is hosting" do
+        expect(Party.is_hosting(@host1)).to eq([@party1, @party2])
+        expect(Party.is_hosting(@friend1)).to eq([])
+      end
+
+      it "returns parties that a user is guest" do
+        expect(Party.is_guest(@host1)).to eq([@party3])
+        expect(Party.is_guest(@friend3)).to eq([])
+      end
+    end
   end
 end
