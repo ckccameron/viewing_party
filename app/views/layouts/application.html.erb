@@ -9,9 +9,23 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+      <a href="/">Viewing Party</a>
+        <% if (controller_name == 'welcome' || controller_name == 'users' && action_name == 'new') %>
+        <div class="form-inline">
+          <%= link_to "Register", "/register", class: "mr-sm-2" %>
+          <%= button_to "Log in", "/login", method: :get, class: 'btn btn-outline-primary my-2 my-sm-0' %>
+        </div>
+        <% elsif !(controller_name == 'sessions') %>
+          <%= button_to "Log out", "/logout", method: :get, class: 'btn btn-outline-dark' %>
+        <% end %>
+    </nav>
+
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
+
+
     <main id="main">
       <%= yield %>
     </main>
