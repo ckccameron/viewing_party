@@ -13,7 +13,10 @@ describe 'User Dashboard Page' do
   before(:each) do
     @user = create(:user)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    visit login_path
+    fill_in :email, with: @user.email
+    fill_in :password, with: @user.password
+    click_button "Log in"
   end
 
   it "should show welcome message" do
@@ -76,6 +79,42 @@ describe 'User Dashboard Page' do
       expect(current_path).to eq(dashboard_path)
       expect(page).to have_content("You currently have no friends")
       expect(page).to have_content("Couldn't find user with this email: #{email}")
+    end
+
+    xit "shows viewing parties on dashboard that include movie title, date, time and status of host or invited for the given user" do
+      friend1 = create(:user)
+      friend2 = create(:user)
+      friend3 = create(:user)
+      friend4 = create(:user)
+
+      party1 = create(:party)
+      party2 = create(:party)
+      party3 = create(:party)
+      binding.pry
+
+      create(:guest, party_id: party1.id, user_id: @user.id, is_host: true)
+      create(:guest, party_id: party2.id, user_id: @user.id, is_host: false)
+
+      # user = User.find(@user.id)
+      # user.reload
+
+      visit dashboard_path
+
+      save_and_open_page
+      within ".parties" do
+        expect(page).to have_link(party1.movie_title)
+        expect(page).to have_link(party2.movie_title)
+        expect(page).to have_css(".hosting-party-row")
+        expect(page).to have_css(".guest-party-row")
+      end
+    end
+
+    it 'displays zero parties message to user if they have no parties that they are hosting or invited to' do
+      visit dashboard_path
+
+      within ".parties" do
+        expect(page).to have_content("You have zero parties")
+      end
     end
   end
 end

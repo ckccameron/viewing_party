@@ -1,8 +1,7 @@
 <%= button_to "Log out", "/logout", method: :get %>
+<%= button_to "Discover Movies", discover_path, method: :get %>
 
 <p>Welcome, <%= current_user.name %>!</p>
-
-<%= button_to "Discover Movies", discover_path, method: :get %>
 
 <section class="friends">
   <h3>Friends</h3>
@@ -21,6 +20,34 @@
   <% end %>
 </section>
 
-<section class="parties">
 
+<section class="parties">
+  <h3>Viewing Parties</h3>
+  <% if !current_user.parties.empty? %>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Date and Time</th>
+        <th>Status</th>
+      </tr>
+
+    <% Party.is_hosting(current_user).each do |party|%>
+      <tr class='hosting-party-row' id=<%="party-#{party.id}"%>>
+        <td><%= link_to party.movie_title, "movies/#{party.movie_id}" %></td>
+        <td> <%= party.datetime %> </td>
+        <td>Hosting</td>
+      </tr>
+    <% end %>
+
+    <% Party.is_guest(current_user).each do |party|%>
+      <tr class='guest-party-row' id=<%="party-#{party.id}"%>>
+        <td><%= link_to party.movie_title, "movies/#{party.movie_id}" %></td>
+        <td> <%= party.datetime %> </td>
+        <td>Invited</td>
+      </tr>
+    <% end %>
+    </table>
+  <% else %>
+    <p>You have zero parties</p>
+  <% end %>
 </section>
