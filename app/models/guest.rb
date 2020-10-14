@@ -13,5 +13,4 @@ class Guest < ApplicationRecord
       Guest.create({ user_id: guest.id, party_id: party.id })
     end
   end
-  ## QUESTION: How could we refactor the method above?
 end

@@ -20,4 +20,12 @@ class Party < ApplicationRecord
     datetime = date + ' ' + time
     datetime.to_datetime
   end
+
+  def self.is_hosting(current_user)
+    Party.where("guests.user_id = #{current_user.id} and guests.is_host = true").joins(:guests)
+  end
+
+  def self.is_guest(current_user)
+    Party.where("guests.user_id = #{current_user.id} and guests.is_host = false").joins(:guests)
+  end
 end
