@@ -13,6 +13,8 @@ class SearchResults
     data = service.details(id)
     data[:cast] = service.cast(id)[:cast]
     data[:reviews] = service.reviews(id)
+    data[:poster] = service.posters(id)[:posters].first
+    data[:video] = get_youtube_video(id)
 
     movie(data)
   end
@@ -21,6 +23,13 @@ class SearchResults
     data = service.details(id)
 
     movie(data)
+  end
+
+  def self.get_youtube_video(id)
+    video = service.videos(id)[:results].find do |video_data|
+      video_data[:site] == "YouTube"
+    end
+    video[:key] if video
   end
 
   def self.service

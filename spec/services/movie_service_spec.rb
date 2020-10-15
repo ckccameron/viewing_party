@@ -33,7 +33,7 @@ describe MovieService do
       expect(movies.first[:title]).to include("Happy")
       expect(movies.first[:title].length).to be > 0
       expect(movies.first).to have_key(:vote_average)
-      expect(movies.first[:vote_average]).to be_a(Float)
+      expect(movies.first[:vote_average]).to be_a(Integer)
       expect(movies.first[:vote_average]).to be_between(0, 10).inclusive
     end
   end
@@ -93,6 +93,30 @@ describe MovieService do
       expect(movie.first).to have_key(:content)
       expect(movie.first[:content]).to be_a(String)
       expect(movie.first[:content].length).to be > 0
+    end
+  end
+
+  it "returns movie poster images" do
+    VCR.use_cassette('fight_club_images_results', allow_playback_repeats: true) do
+      movie_id = 550
+      movie_posters = @service.posters(movie_id)
+      expect(movie_posters).to be_a(Hash)
+      expect(movie_posters[:posters]).to be_an(Array)
+      expect(movie_posters[:posters].first).to be_a(Hash)
+      expect(movie_posters[:posters].first).to have_key(:file_path)
+      expect(movie_posters[:posters].first[:file_path]).to be_a(String)
+    end
+  end
+
+  it "returns movie videos" do
+    VCR.use_cassette('fight_club_video_results', allow_playback_repeats: true) do
+      movie_id = 550
+      movie_videos = @service.videos(movie_id)
+      expect(movie_videos).to be_a(Hash)
+      expect(movie_videos[:results]).to be_an(Array)
+      expect(movie_videos[:results].first).to be_a(Hash)
+      expect(movie_videos[:results].first).to have_key(:key)
+      expect(movie_videos[:results].first[:key]).to be_a(String)
     end
   end
 end
