@@ -19,6 +19,8 @@ gem 'figaro'
 gem 'faraday'
 gem 'bcrypt'
 gem 'validates_timeliness', '~> 5.0.0.beta1'
+gem 'bootstrap'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry'

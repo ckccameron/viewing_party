@@ -9,12 +9,46 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-primary justify-content-between">
+      <a class='text-light' href="/">Viewing Party</a>
+        <% if logged_in? %>
+        <%= button_to "My dashboard", "/dashboard", method: :get, class: 'btn btn-outline-light' %>
+        <%= button_to "Log out", "/logout", method: :get, class: 'btn btn-outline-dark' %>
+        <% else %>
+        <div class="form-inline">
+          <%= link_to "Register", "/register", class: "mr-sm-2 text-light" %>
+          <%= button_to "Log in", "/login", method: :get, class: 'btn btn-outline-light my-2 my-sm-0' unless controller_name == 'sessions'%>
+        </div>
+        <% end %>
+    </nav>
+
     <% flash.each do |type, message| %>
-      <p><%= message %></p>
+      <% if type == 'success' %>
+        <div class="alert alert-warning" role="alert">
+          <%= message %>
+        </div>
+      <% else %>
+        <div class="alert alert-dark" role="alert">
+          <%= message %>
+        </div>
+      <% end %>
     <% end %>
-    <main>
-      <%= yield %>
+
+
+    <main id="main">
+      <% if action_name == "new" && !(controller_name == 'parties') %>
+      <div class="card form-card" style='width: 50%; margin: auto;'>
+        <div class="card-body">
+          <div style='width: 50%; margin: auto;'>
+          <%= yield %>
+        </div>
+        </div>
+      </div>
+      <% else %>
+        <%= yield %>
+      <% end %>
     </main>
+
     <footer>
       <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="The MovieDB Logo" width="75px" style="margin:10px" >
       <div>

@@ -1,21 +1,54 @@
 <%= render partial: 'shared/search' %>
-
 <h1 class='movie-title'><%= @movie.title %></h1>
-<%= button_to "Create Viewing Party", "/parties/new", method: :get, params: {movie_id: @movie.id} %>
+<div id="center-button">
+  <%= button_to "Create Viewing Party", "/parties/new", method: :get, params: {movie_id: @movie.id}, class: "btn btn-outline-warning my-2" %>
+</div>
 
-<section>
-  <p class='movie-vote-average'>Vote Average: <%= @movie.vote_average %></p>
-  <p class='movie-runtime'>Runtime: <%= @movie.formatted_runtime %> </p>
-  <p class='movie-genres'>Genres: <%= @movie.genres %> </p>
+<section id='center'>
+  <h4 class='movie-vote-average'>Vote Average: <%= @movie.vote_average %>
+  <h4 class='movie-runtime'>Runtime: <%= @movie.formatted_runtime %>
+  <h4 class='movie-genres'>Genres: <%= @movie.genres %>
 </section>
 <h2>Overview</h2>
 <p class='movie-overview'>Overview: <%= @movie.overview %> </p>
 <h2>Cast</h2>
-<% @movie.cast.each do |actor| %>
-  <p class='movie-cast'> <%= actor %> </p>
-<% end %>
+<div class="card-deck">
+  <% @movie.cast.first(5).each do |actor| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <p class='movie-cast'> <%= actor %> </p>
+    </div>
+  </div>
+  <% end %>
+</div>
+<div class="card-deck">
+  <% @movie.cast.last(5).each do |actor| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <p class='movie-cast'> <%= actor %> </p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
 <h2 class='movie-review-count'> <%= @movie.reviews.size %> Reviews</h2>
-<% @movie.reviews.each do |review| %>
-  <p class='movie-review'>Author: <%= review.author %> </p>
-  <p class='movie-review'> <%= review.content %> </p>
-<% end %>
+
+<div class="accordion" id="accordion">
+  <% @movie.reviews.each do |review| %>
+    <div class="card">
+      <div class="card-header" id="heading1">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            <p class='movie-review'>Author: <%= review.author %> </p>
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+        <div class="card-body">
+          <p class='movie-review'> <%= review.content %> </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

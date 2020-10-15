@@ -3,10 +3,3 @@
 <h2>Welcome to Viewing Party!</h2>
 
 <p>Viewing Party is the best way to coordinate movie viewing parties with your friends online. Viewing Party allows you to add friends and send them invites to create watch parties. You and your friends can enjoy your favorite movies together.</p>
-
-<% if current_user %>
-  <%= button_to "Log out", "/logout", method: :get %>
-<% else %>
-  <%= button_to "Log in", "/login", method: :get %>
-  <%= link_to "Register", "/register" %>
-<% end %>
