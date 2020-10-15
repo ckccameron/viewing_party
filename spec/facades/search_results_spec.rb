@@ -57,4 +57,17 @@ describe SearchResults do
       expect(movie.vote_average).to_not eq(nil)
     end
   end
+
+  it "returns movie poster" do
+    VCR.use_cassette('fight_club_details_results', allow_playback_repeats: true) do
+      VCR.use_cassette('fight_club_images_results', allow_playback_repeats: true) do
+        fight_club_id = 550
+        movie = SearchResults.movie_details(fight_club_id)
+
+        expect(movie).to be_a(Movie)
+        expect(movie.poster).to be_a(String)
+        expect(movie.poster).to_not eq(nil)
+      end
+    end
+  end
 end
