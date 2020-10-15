@@ -11,11 +11,11 @@ describe 'As an authenticated user on' do
       click_button "Log in"
     end
 
-    it "a Button to create a viewing party" do
-      VCR.use_cassette("top_40_rated_movies", allow_playback_repeats: true) do
+    it "a Button to create a viewing party", :vcr do
+      # VCR.use_cassette("top_40_rated_movies", allow_playback_repeats: true) do
         visit movies_path
 
-        VCR.use_cassette("inception_search_results", allow_playback_repeats: true) do
+        # VCR.use_cassette("inception_search_results", allow_playback_repeats: true) do
           fill_in :query, with: "Inception"
           click_button "Search"
           expect(current_path).to eq('/movies')
@@ -32,12 +32,12 @@ describe 'As an authenticated user on' do
 
           click_button "Create Viewing Party"
           expect(current_path).to eq('/parties/new')
-        end
-      end
+        # end
+      # end
     end
 
     it "movie info, details, cast and reviews" do
-      VCR.use_cassette("fight_club_top_rated_results") do
+      VCR.use_cassette("fight_club_top_rated_results", allow_playback_repeats: true) do
         visit movies_path
 
         fill_in :query, with: "Fight Club"
@@ -87,6 +87,26 @@ describe 'As an authenticated user on' do
             end
           end
         end
+      end
+    end
+
+    it "also displays movie poster and any videos for the movie" do
+      VCR.use_cassette("fight_club_top_rated_results", allow_playback_repeats: true) do
+        visit movies_path
+
+        fill_in :query, with: "Fight Club"
+        click_button "Search"
+        expect(current_path).to eq('/movies')
+
+        within('#movie-550') do
+          click_on "Fight Club"
+        end
+        expect(current_path).to eq('/movies/550')
+
+        expect(page).to have_css(".movie-poster")
+        expect(page).to have_css("img[src*='https://image.tmdb.org/t/p/w185/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg']") 
+        expect(page).to have_css(".movie-videos")
+        # how to test videos appearance on page
       end
     end
   end
