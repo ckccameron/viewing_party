@@ -13,6 +13,7 @@ class SearchResults
     data = service.details(id)
     data[:cast] = service.cast(id)[:cast]
     data[:reviews] = service.reviews(id)
+    data[:poster] = service.posters(id)[:posters].first
 
     movie(data)
   end

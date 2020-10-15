@@ -95,4 +95,16 @@ describe MovieService do
       expect(movie.first[:content].length).to be > 0
     end
   end
+
+  it "returns movie poster images" do
+    VCR.use_cassette('fight_club_images_results', allow_playback_repeats: true) do
+      movie_id = 550
+      movie_posters = @service.posters(movie_id)
+      expect(movie_posters).to be_a(Hash)
+      expect(movie_posters[:posters]).to be_an(Array)
+      expect(movie_posters[:posters].first).to be_a(Hash)
+      expect(movie_posters[:posters].first).to have_key(:file_path)
+      expect(movie_posters[:posters].first[:file_path]).to be_a(String)
+    end
+  end
 end

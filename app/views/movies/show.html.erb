@@ -4,6 +4,10 @@
   <%= button_to "Create Viewing Party", "/parties/new", method: :get, params: {movie_id: @movie.id}, class: "btn btn-outline-warning my-2" %>
 </div>
 
+<section class="movie-poster">
+  <%= image_tag @movie.poster %>
+</section>
+
 <section id='center'>
   <h4 class='movie-vote-average'>Vote Average: <%= @movie.vote_average %>
   <h4 class='movie-runtime'>Runtime: <%= @movie.formatted_runtime %>
