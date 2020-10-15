@@ -2,11 +2,11 @@
 <h1 class='movie-title'><%= @movie.title %></h1>
 <div id="center-button">
   <%= button_to "Create Viewing Party", "/parties/new", method: :get, params: {movie_id: @movie.id}, class: "btn btn-outline-warning my-2" %>
+  <section class="movie-poster my-2">
+    <%= image_tag @movie.poster %>
+  </section>
 </div>
 
-<section class="movie-poster">
-  <%= image_tag @movie.poster %>
-</section>
 
 <section id='center'>
   <h4 class='movie-vote-average'>Vote Average: <%= @movie.vote_average %>
