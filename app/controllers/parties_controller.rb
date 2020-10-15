@@ -15,7 +15,7 @@ class PartiesController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:error] = @party.errors.full_messages.to_sentence
-      redirect_to new_party_path
+      redirect_to parties_new_path
     end
   end
 
