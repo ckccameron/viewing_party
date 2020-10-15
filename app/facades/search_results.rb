@@ -27,7 +27,7 @@ class SearchResults
 
   def self.get_youtube_video(id)
     video = service.videos(id)[:results].find do |video_data|
-      video_data[:site] == "YouTube"
+      video_data[:site] == 'YouTube'
     end
     video[:key] if video
   end

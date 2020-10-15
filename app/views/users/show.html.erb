@@ -29,7 +29,7 @@
         <th>Status</th>
       </tr>
 
-    <% Party.is_hosting(current_user).each do |party|%>
+    <% Party.host_is(current_user).each do |party|%>
       <tr class='hosting-party-row' id=<%="party-#{party.id}"%>>
         <td><%= link_to party.movie_title, "movies/#{party.movie_id}" %></td>
         <td> <%= party.datetime %> </td>
@@ -37,7 +37,7 @@
       </tr>
     <% end %>
 
-    <% Party.is_guest(current_user).each do |party|%>
+    <% Party.guest_is(current_user).each do |party|%>
       <tr class='guest-party-row' id=<%="party-#{party.id}"%>>
         <td><%= link_to party.movie_title, "movies/#{party.movie_id}" %></td>
         <td> <%= party.datetime %> </td>
