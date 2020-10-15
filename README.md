@@ -21,7 +21,7 @@ The deployment for our application in production is handled by Heroku. Our appli
 
 ## About This Project <a name="about_this_project"></a>
 
-Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friends. A user registers with their name, email and password, and subsequently logs in to the application. Returning users can also login. Once they are authenticated, a user can discover movies by top 40O rated movies, or they can enter in a search query to look up results. Consuming TheMovieDB API allows us to call our movie data.
+Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friends. A user registers with their name, email and password, and subsequently logs in to the application. Returning users can also login. Once they are authenticated, a user can discover movies by top 40 rated movies, or they can enter in a search query to look up results. Consuming TheMovieDB API allows us to call our movie data.
 
 Viewing parties are created by the user, however the user must have added friends. Users can view all of the parties that they are either hosting or been invited to, and their dashboard page also allows them to add more friends at any time. 
 
