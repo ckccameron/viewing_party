@@ -48,8 +48,17 @@ describe Movie do
                                     "content": "In my top 5 of all time favourite movies. Great story line and a movie you can watch over and over again.",
                                     "id": "5b3e1ba1925141144c007f17",
                                     "url": "https://www.themoviedb.org/review/5b3e1ba1925141144c007f17"
-                                }]
-                  }
+                                }],
+                      poster: {
+                                :aspect_ratio=>0.6666666666666666,
+                                :file_path=>"/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+                                :height=>3000,
+                                :iso_639_1=>"fr",
+                                :vote_average=>5.384,
+                                :vote_count=>2,
+                                :width=>2000
+                              }
+                          }
 
 
     @movie = Movie.new(@movie_data)
@@ -65,6 +74,7 @@ describe Movie do
     expect(@movie.genres).to eq("Drama, Action")
     expect(@movie.cast).to eq(["Edward Norton as The Narrator", "Brad Pitt as Tyler Durden" ])
     expect(@movie.reviews.all? { |review| review.class == Review }).to be_truthy
+    expect(@movie.poster).to eq("https://image.tmdb.org/t/p/w185/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg")
   end
 
   it "has genre formatting method" do
