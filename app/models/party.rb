@@ -1,9 +1,9 @@
 class Party < ApplicationRecord
-  has_many :guests
+  has_many :guests, dependent: :destroy
 
-  validates_presence_of :movie_id, :duration, :datetime, :movie_title
-  validates_numericality_of :duration
-  validates_date :datetime, on_or_after: lambda { Date.today }
+  validates :movie_id, :duration, :datetime, :movie_title, presence: true
+  validates :duration, numericality: true
+  validates_date :datetime, on_or_after: -> { Time.zone.today }
 
   def self.format_params(data)
     {
@@ -15,17 +15,17 @@ class Party < ApplicationRecord
   end
 
   def self.format_datetime(data)
-    date = [data["date(1i)"], data["date(2i)"], data["date(3i)"]].join('/')
-    time = [data["date(4i)"], data["date(5i)"]].join(':')
+    date = [data['date(1i)'], data['date(2i)'], data['date(3i)']].join('/')
+    time = [data['date(4i)'], data['date(5i)']].join(':')
     datetime = date + ' ' + time
     datetime.to_datetime
   end
 
-  def self.is_hosting(current_user)
+  def self.host_is(current_user)
     Party.where("guests.user_id = #{current_user.id} and guests.is_host = true").joins(:guests)
   end
 
-  def self.is_guest(current_user)
+  def self.guest_is(current_user)
     Party.where("guests.user_id = #{current_user.id} and guests.is_host = false").joins(:guests)
   end
 end

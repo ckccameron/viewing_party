@@ -10,7 +10,7 @@ class PartiesController < ApplicationController
     attributes = Party.format_params(params)
     @party = Party.new(attributes)
     if @party.save
-      flash[:success] = "Your party has been created!"
+      flash[:success] = 'Your party has been created!'
       Guest.create_invites(params, current_user, @party)
       redirect_to dashboard_path
     else

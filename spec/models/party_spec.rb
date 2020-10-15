@@ -56,13 +56,13 @@ describe Party do
       end
 
       it "returns parties that a user is hosting" do
-        expect(Party.is_hosting(@host1)).to eq([@party1, @party2])
-        expect(Party.is_hosting(@friend1)).to eq([])
+        expect(Party.host_is(@host1)).to eq([@party1, @party2])
+        expect(Party.host_is(@friend1)).to eq([])
       end
 
       it "returns parties that a user is guest" do
-        expect(Party.is_guest(@host1)).to eq([@party3])
-        expect(Party.is_guest(@friend3)).to eq([])
+        expect(Party.guest_is(@host1)).to eq([@party3])
+        expect(Party.guest_is(@friend3)).to eq([])
       end
     end
   end

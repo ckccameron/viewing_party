@@ -25,7 +25,7 @@ class MovieService
   end
 
   def videos(movie_id)
-    to_json("movie/#{movie_id}/videos")  
+    to_json("movie/#{movie_id}/videos")
   end
 
   def aggregator(url, params = {})
