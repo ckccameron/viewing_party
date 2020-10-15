@@ -19,7 +19,7 @@ describe SearchResults do
       expect(movies).to be_an(Array)
       expect(movies.first).to be_a(Movie)
       expect(movies.first.title).to be_a(String)
-      expect(movies.first.vote_average).to be_an(Float)
+      expect(movies.first.vote_average).to be_an(Integer)
     end
   end
 
@@ -67,6 +67,19 @@ describe SearchResults do
         expect(movie).to be_a(Movie)
         expect(movie.poster).to be_a(String)
         expect(movie.poster).to_not eq(nil)
+      end
+    end
+  end
+
+  it "returns movie video key" do
+    VCR.use_cassette('fight_club_details_results', allow_playback_repeats: true) do
+      VCR.use_cassette('fight_club_videos_results', allow_playback_repeats: true) do
+        fight_club_id = 550
+        movie = SearchResults.movie_details(fight_club_id)
+
+        expect(movie).to be_a(Movie)
+        expect(movie.video).to be_a(String)
+        expect(movie.video).to_not eq(nil)
       end
     end
   end
