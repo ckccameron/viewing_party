@@ -57,7 +57,8 @@ describe Movie do
                                 :vote_average=>5.384,
                                 :vote_count=>2,
                                 :width=>2000
-                              }
+                              },
+                      video: "BdJKm16Co6M"
                           }
 
 
@@ -75,6 +76,7 @@ describe Movie do
     expect(@movie.cast).to eq(["Edward Norton as The Narrator", "Brad Pitt as Tyler Durden" ])
     expect(@movie.reviews.all? { |review| review.class == Review }).to be_truthy
     expect(@movie.poster).to eq("https://image.tmdb.org/t/p/w185/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg")
+    expect(@movie.video).to eq("https://www.youtube.com/embed/BdJKm16Co6M")
   end
 
   it "has genre formatting method" do
