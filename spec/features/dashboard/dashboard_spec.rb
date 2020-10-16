@@ -81,7 +81,7 @@ describe 'User Dashboard Page' do
       expect(page).to have_content("Couldn't find user with this email: #{email}")
     end
 
-    xit "shows viewing parties on dashboard that include movie title, date, time and status of host or invited for the given user" do
+    it "shows viewing parties on dashboard that include movie title, date, time and status of host or invited for the given user" do
       friend1 = create(:user)
       friend2 = create(:user)
       friend3 = create(:user)
@@ -90,17 +90,12 @@ describe 'User Dashboard Page' do
       party1 = create(:party)
       party2 = create(:party)
       party3 = create(:party)
-      binding.pry
 
-      create(:guest, party_id: party1.id, user_id: @user.id, is_host: true)
-      create(:guest, party_id: party2.id, user_id: @user.id, is_host: false)
-
-      # user = User.find(@user.id)
-      # user.reload
+      create(:guest, party_id: party1.id, user_id: @user1.id, is_host: true)
+      create(:guest, party_id: party2.id, user_id: @user1.id, is_host: false)
 
       visit dashboard_path
 
-      save_and_open_page
       within ".parties" do
         expect(page).to have_link(party1.movie_title)
         expect(page).to have_link(party2.movie_title)
