@@ -1,6 +1,9 @@
 <h1>Welcome, <%= current_user.name %>!</h1>
 
+<div style='text-align: center;'>
+
 <%= button_to "Discover Movies", discover_path, method: :get, class: 'btn btn-outline-warning', id: 'center-button' %>
+</div>
 
 <section class="friends">
   <h3>Friends</h3>
@@ -19,7 +22,7 @@
 </section>
 
 
-<section class="parties">
+<section class="parties my-2">
   <h3>Viewing Parties</h3>
   <% if !current_user.parties.empty? %>
     <table>
@@ -32,7 +35,7 @@
     <% Party.host_is(current_user).each do |party|%>
       <tr class='hosting-party-row' id=<%="party-#{party.id}"%>>
         <td><%= link_to party.movie_title, "movies/#{party.movie_id}" %></td>
-        <td> <%= party.datetime %> </td>
+        <td> <%= party.datetime.strftime("%a, %b %d %Y") %> </td>
         <td>Hosting</td>
       </tr>
     <% end %>
@@ -40,7 +43,7 @@
     <% Party.guest_is(current_user).each do |party|%>
       <tr class='guest-party-row' id=<%="party-#{party.id}"%>>
         <td><%= link_to party.movie_title, "movies/#{party.movie_id}" %></td>
-        <td> <%= party.datetime %> </td>
+        <td> <%= party.datetime.strftime("%a, %b %d %Y") %> </td>
         <td>Invited</td>
       </tr>
     <% end %>

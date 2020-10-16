@@ -1,17 +1,16 @@
+<div style='text-align: center;'>
 <%= form_tag '/register', method: :post do %>
-  <%= label_tag :name %>
-  <%= text_field_tag :name %>
+  <%= label_tag :name %><br>
+  <%= text_field_tag :name %><br>
 
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
+  <%= label_tag :email %><br>
+  <%= text_field_tag :email %><br>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+  <%= label_tag :password %><br>
+  <%= password_field_tag :password %><br>
 
-  <%= label_tag :password_confirmation %>
-  <%= password_field_tag :password_confirmation %>
-  <div style='text-align: center;'>
+  <%= label_tag :password_confirmation %><br>
+  <%= password_field_tag :password_confirmation %><br>
     <%= submit_tag "Create User", class: 'btn btn-primary my-2'  %>
-  </div>
-
 <% end %>
+</div>
