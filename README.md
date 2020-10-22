@@ -1,29 +1,39 @@
-# Viewing Party
+# [Viewing Party](https://viewing-party-ac.herokuapp.com)
 
-This is our repo for the [viewing party paired project](https://backend.turing.io/module3/projects/viewing_party) during Turing's Backend Module 3. Example wireframes to follow can be found [here](https://backend.turing.io/module3/projects/viewing_party/wireframes).
-
-## CI & Deployment
-
-Builds are run by Travis CI: [![Build Status](https://travis-ci.org/ckccameron/viewing_party.svg?branch=main)](https://travis-ci.org/ckccameron/viewing_party)
-
-The deployment for our application in production is handled by Heroku. Our application can be found here: [https://viewing-party-ac.herokuapp.com](https://viewing-party-ac.herokuapp.com).
-
-## Contributors 
-[Angela Guardia](https://github.com/AngelaGuardia) & 
-[Cam Chery](https://github.com/ckccameron)
+Viewing party is an application created by [Angela Guardia](https://github.com/AngelaGuardia) & 
+[Cam Chery](https://github.com/ckccameron), as part of the Turing School of Software and Design Backend [curriculum](https://backend.turing.io/module3/projects/viewing_party). It was completed over a period of 10 days.
 
 ## Table of Contents
+1. [CI & Deployment](#deployement)
 1. [About This Project](#about_this_project)
 2. [Learning Achievements](#learning_achievements)
 3. [Local Setup](#setup)
 4. [Schema Design](#schema)
+1. [Testing](#testing)
+1. [Contributors](#contributors)
 5. [Resources](#resources)
+
+## CI & Deployment <a name="deployement"></a>
+
+Builds are run by Travis CI: 
+[![Build Status](https://travis-ci.org/ckccameron/viewing_party.svg?branch=main)](https://travis-ci.org/ckccameron/viewing_party)
+
+The deployment for our application in production is handled by Heroku and can be accessed here:
+
+[Viewing Party](https://viewing-party-ac.herokuapp.com)
+
+If you'd like to get the full experience you can use this account that already has friends and viewing parties added:
+
+`email: visitor@email.com`
+
+`password: 1234`
+
 
 ## About This Project <a name="about_this_project"></a>
 
-Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friends. A user registers with their name, email and password, and subsequently logs in to the application. Returning users can also login. Once they are authenticated, a user can discover movies by top 40 rated movies, or they can enter in a search query to look up results. Consuming TheMovieDB API allows us to call our movie data.
+Viewing party web application that allows the user to explore movies and create events to watch them with friends. Users can register with their name, email, and password, and are automatically logged into the application. Returning users can also login. Once they are authenticated, users can discover movies by top 40 rated movies, or they can search vy movie title and get the top matching results. Movie pages show movie information as well as a poster and trailer. All movie data is obtianed by [TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction).
 
-Viewing parties are created by the user, however the user must have added friends. Users can view all of the parties that they are either hosting or been invited to, and their dashboard page also allows them to add more friends at any time. 
+Users can add friends through their email addresses. Users can then create viewing parties by picking a movie, a date, and adding friends. On the user dashboard users can view all of the parties that they are either hosting or been invited to. 
 
 ## Learning Achievements <a name="learning_achievements"></a>
 
@@ -49,6 +59,17 @@ Viewing parties are created by the user, however the user must have added friend
 ## Schema Design <a name="schema"></a>
 
 <img width="877" alt="Screen Shot 2020-10-15 at 8 08 56 AM" src="https://user-images.githubusercontent.com/57038617/96149478-3757ad00-0ebe-11eb-97f5-2b450efca0c9.png">
+
+## Testing
+
+We used RSpec with the help of Capybara, Shoulda-matchers, FactoryBot, Webmock, and VCR to implement thorough and efficient tests that resulted in full test coverage:
+
+![Screen Shot 2020-10-14 at 7 50 07 PM](https://user-images.githubusercontent.com/47278429/96194683-c89b4380-0eff-11eb-9c37-792634af2509.png)
+
+## Contributors <a name="contributors"></a>
+[Angela Guardia](https://github.com/AngelaGuardia)
+
+[Cam Chery](https://github.com/ckccameron)
 
 ## Resources <a name="resources"></a>
 - [TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction)
