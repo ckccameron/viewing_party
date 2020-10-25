@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 15 Oct 2020 01:43:04 GMT
+      - Sun, 25 Oct 2020 03:21:28 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,29 +42,29 @@ http_interactions:
       X-Memc-Key:
       - f10c35914c6b498b595b64216a39df5b
       X-Memc-Age:
-      - '17238'
+      - '6785'
       X-Memc-Expires:
-      - '4362'
+      - '14815'
       Etag:
       - W/"5f619501299540f4f1d3c3011654e668"
       Last-Modified:
-      - Thu, 15 Oct 2020 01:43:04 GMT
+      - Sun, 25 Oct 2020 03:21:28 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 f8fc96ea3c176a81c3c31655e239f179.cloudfront.net (CloudFront)
+      - 1.1 30f80e470abaf8292272e872df09bc50.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAH50-C4
+      - SFO5-C3
       X-Amz-Cf-Id:
-      - HPJX7mBo2zafSPFAv0hcjPWTzvEIm_-yRw-trpkVRJAqUQO6XpsSCw==
+      - T79e71mTtjZ4pHPMzfamHhm4mdKLj6Yo2ETKiFTXiMauy1JGl0kkIQ==
       Age:
-      - '2896'
+      - '17'
     body:
       encoding: ASCII-8BIT
       string: '{"id":550,"results":[{"id":"5c9294240e0a267cd516835f","iso_639_1":"en","iso_3166_1":"US","key":"BdJKm16Co6M","name":"Fight
         Club | #TBT Trailer | 20th Century FOX","site":"YouTube","size":1080,"type":"Trailer"},{"id":"5e382d1b4ca676001453826d","iso_639_1":"en","iso_3166_1":"US","key":"6JnN1DmbqoU","name":"Fight
         Club - Theatrical Trailer Remastered in HD","site":"YouTube","size":1080,"type":"Trailer"}]}'
-  recorded_at: Thu, 15 Oct 2020 02:31:20 GMT
+  recorded_at: Sun, 25 Oct 2020 03:21:45 GMT
 recorded_with: VCR 6.0.0
