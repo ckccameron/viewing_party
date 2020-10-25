@@ -8,9 +8,15 @@
 <section class="friends">
   <h3>Friends</h3>
   <%= form_tag "/friendships", method: :post do %>
-    <%= label_tag :friend_email, "Enter your friend's email" %>
-    <%= text_field_tag :friend_email, nil, placeholder: "example@email.com" %>
-    <%= submit_tag "Add Friend", class: 'btn btn-outline-primary' %>
+  <%= label_tag :friend_email, "Enter your friend's email: " %>
+  <div class="row">
+    <div class="col">
+      <%= text_field_tag :friend_email, nil, placeholder: "example@email.com", class: 'form-control' %>
+    </div>
+    <div class="col-7">
+      <%= submit_tag "Add Friend", class: 'btn btn-outline-primary' %>
+    </div>
+  </div><br>
   <% end %>
   <% if @friends.empty? == false %>
     <% @friends.each do |friend| %>
@@ -19,13 +25,13 @@
   <% else %>
     <p>You currently have no friends</p>
   <% end %>
-</section>
+</section><br>
 
 
 <section class="parties my-2">
   <h3>Viewing Parties</h3>
   <% if !current_user.parties.empty? %>
-    <table>
+    <table class="table">
       <tr>
         <th>Title</th>
         <th>Date and Time</th>
