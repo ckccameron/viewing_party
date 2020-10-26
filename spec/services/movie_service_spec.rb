@@ -33,7 +33,7 @@ describe MovieService do
       expect(movies.first[:title]).to include("Happy")
       expect(movies.first[:title].length).to be > 0
       expect(movies.first).to have_key(:vote_average)
-      expect(movies.first[:vote_average]).to be_a(Integer)
+      expect(movies.first[:vote_average]).to be_a(Float)
       expect(movies.first[:vote_average]).to be_between(0, 10).inclusive
     end
   end

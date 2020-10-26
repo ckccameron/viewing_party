@@ -1,28 +1,27 @@
-<div class="card form-card" style='width: 80%; margin: auto;'>
-  <div class="card-body">
-    <div style='width: 90%; margin: auto;'>
-      <h3>Create Your New Viewing Party</h3>
+<h2>Create Your New Viewing Party</h2>
 
-      <%= form_tag "/parties", method: :post do %>
-      <%= text_field_tag :movie_id, @movie.id, hidden: true %>
-      <%= label_tag :movie_title, "Movie Title:" %><br>
-      <%= text_field_tag :movie_title, @movie.title, readonly: true %><br><br>
-      <%= label_tag :duration, "Duration (in minutes):" %><br>
-      <%= number_field_tag :duration, "#{@movie.runtime}" %><br>
-      <%= label_tag :datetime, "Select a date and time:" %><br>
-      <%= datetime_select("party", "date") %><br>
+<%= form_tag "/parties", class: 'center-form', method: :post do %>
 
-      <section class="party-friends">
-        <%= label_tag :friends, "Choose your friends you want to invite:" %><br>
-        <%= collection_check_boxes("party", "guests", current_user.friends, :email, :name) do |b| %>
-        <%= b.label(:"data-value" => b.value) { b.check_box + " " + b.text + " - " + b.value } %><br>
-        <% end %>
-      </section>
-      <div style='text-align: center;'>
+<div class="form-group">
+  <%= text_field_tag :movie_id, @movie.id, hidden: true %>
 
-      <%= submit_tag "Create This Party", class: 'btn btn-primary my-2' %>
-      <% end %>
-    </div>
-    </div>
-  </div>
+  <%= label_tag :movie_title, "Movie Title:" %>
+  <%= text_field_tag :movie_title, @movie.title, class: 'form-control', readonly: true %> <br>
+
+  <%= label_tag :duration, "Duration (in minutes):" %>
+  <%= number_field_tag :duration, "#{@movie.runtime}", class: 'form-control' %><br>
+
+  <%= label_tag :datetime, "Select a date and time:" %>
+  <%= datetime_select "party", "date", class: 'form-control' %><br><br>
+
+  <section class="party-friends">
+    <%= label_tag :friends, "Choose your friends you want to invite:" %><br>
+    <%= collection_check_boxes("party", "guests", current_user.friends, :email, :name) do |b| %>
+    <%= b.label(:"data-value" => b.value) { b.check_box + " " + b.text + " - " + b.value } %><br>
+    <% end %>
+  </section>
+
+
+  <%= submit_tag "Create This Party", class: 'btn btn-primary my-2' %>
 </div>
+  <% end %>

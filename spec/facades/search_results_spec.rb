@@ -19,7 +19,7 @@ describe SearchResults do
       expect(movies).to be_an(Array)
       expect(movies.first).to be_a(Movie)
       expect(movies.first.title).to be_a(String)
-      expect(movies.first.vote_average).to be_an(Integer)
+      expect(movies.first.vote_average).to be_an(Float)
     end
   end
 
