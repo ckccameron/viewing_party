@@ -31,7 +31,7 @@ If you'd like to get the full experience you can use this account that already h
 
 ## About This Project <a name="about_this_project"></a>
 
-Viewing party web application that allows the user to explore movies and create events to watch them with friends. Users can register with their name, email, and password, and are automatically logged into the application. Returning users can also login. Once they are authenticated, users can discover movies by top 40 rated movies, or they can search vy movie title and get the top matching results. Movie pages show movie information as well as a poster and trailer. All movie data is obtianed by [TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction).
+Viewing party is a web application that allows the user to explore movies and create events to watch them with friends. Users can register with their name, email, and password, and are automatically logged into the application. Returning users can also login. Once they are authenticated, users can discover movies by top 40 rated movies, or they can search by movie title and get the top matching results. Movie pages show movie information as well as a poster and trailer. All movie data is obtianed by [TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction).
 
 Users can add friends through their email addresses. Users can then create viewing parties by picking a movie, a date, and adding friends. On the user dashboard users can view all of the parties that they are either hosting or been invited to. 
 
@@ -58,7 +58,7 @@ Users can add friends through their email addresses. Users can then create viewi
   
 ## Schema Design <a name="schema"></a>
 
-<img width="877" alt="Screen Shot 2020-10-15 at 8 08 56 AM" src="https://user-images.githubusercontent.com/57038617/96149478-3757ad00-0ebe-11eb-97f5-2b450efca0c9.png">
+<img width="877" alt="Screen Shot 2020-10-15 at 8 08 56 AM" src="https://user-images.githubusercontent.com/47278429/99192326-24d3cc00-2727-11eb-8d53-19eb0469c558.png">
 
 ## Testing
 
